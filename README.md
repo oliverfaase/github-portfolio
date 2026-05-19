@@ -11,3 +11,4 @@ As part of the project, I presented the database and StoryMap to faculty, my dep
 This project demonstrates my ability to combine GIS, data organization, spatial analysis, web mapping, and public communication into a product that supports both academic storytelling and institutional advancement.
 
 Key skills used: geocoding, ArcGIS Online, ArcGIS StoryMaps, GIS data cleaning, spatial database design, interactive web mapping, project categorization, public presentation, stakeholder communication, urban planning storytelling. to the project here: https://storymaps.arcgis.com/stories/e9f5d7deea894d049f6b7b41eb5e7232
+<img width="1317" height="633" alt="Screenshot 2026-05-19 at 2 25 01 PM" src="https://github.com/user-attachments/assets/86b1b34c-a945-4d38-a827-779c4a398fd2" />
