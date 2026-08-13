@@ -1,3 +1,11 @@
+<img width="2550" height="3300" alt="Bathy2" src="https://github.com/user-attachments/assets/86672c1a-431e-477c-8235-b6744dfeac63" />
+<img width="2550" height="3300" alt="Bathy1" src="https://github.com/user-attachments/assets/b775447a-be58-466d-baff-3a50a5d25ca0" />
+
+
+
+
+
+
 Cal Poly CRP Studio Project GIS Database & StoryMap
 
 This project is a GIS-based database and interactive StoryMap created to organize, map, and showcase past Cal Poly City and Regional Planning studio projects. I built the project by compiling studio project records, cleaning and organizing the attribute data, and geocoding each project by location so it could be displayed spatially in an interactive web map.
