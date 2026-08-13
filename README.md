@@ -1,3 +1,33 @@
+
+**Port of Tacoma Shoreline Monitoring Experience Builder:**
+
+This project involved the development of an ArcGIS Experience Builder application designed to support long-term shoreline monitoring throughout the Port of Tacoma. The application displays shoreline monitoring locations as interactive map points, providing an organized and accessible way to track environmental conditions across multiple sites over time.
+
+The monitoring program uses drone imagery collected from pre-defined flight locations and automated flight schedules, ensuring photographs are captured from the same positions and viewing angles during each survey. By maintaining consistent image collection methods, the application enables year-over-year comparisons of shoreline conditions, allowing users to visually assess changes in vegetation, sediment deposition, erosion, bank stability, and other environmental factors.
+
+To enhance analysis capabilities, the project incorporates GeoAI workflows that compare imagery captured across different time periods and identify potential shoreline changes. These automated comparisons help streamline the detection of erosion, habitat shifts, and other environmental changes that may otherwise require extensive manual review. The resulting Experience Builder serves as a centralized platform for organizing drone imagery, visualizing shoreline conditions, and supporting data-driven environmental management and monitoring efforts throughout the Port of Tacoma.
+
+**Skills & Technologies:**
+
+ArcGIS Experience Builder & ArcGIS Online
+
+Drone Imagery Management & Temporal Change Detection
+
+Shoreline Monitoring & Environmental GIS Analysis
+
+GeoAI-Assisted Image Comparison
+
+Interactive Web Application Development
+
+Spatial Data Integration & Visualization
+
+
+
+https://github.com/user-attachments/assets/52ce3565-4f6b-4721-a516-202b5a457347
+
+
+
+
 **Port of Tacoma Bathymetric Surface Development:**
 
 Contributed to the development of a high-resolution bathymetric GIS dataset for the Port of Tacoma, transforming hydrographic survey data into an accurate representation of underwater terrain and seafloor topography. As part of the workflow, I processed and converted Triangulated Irregular Network (TIN) surfaces into raster datasets, enabling more efficient analysis, visualization, and integration with other geospatial resources. I also developed raster surfaces constrained to complex, curved shoreline and waterway boundaries, ensuring the final products accurately reflected real-world conditions while maintaining spatial precision.
