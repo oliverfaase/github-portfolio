@@ -1,3 +1,32 @@
+**Interactive Habitat Assessment StoryMap:**
+
+This project involved the development of an interactive ArcGIS StoryMap designed to showcase habitat assessment sites throughout the Port of Tacoma and communicate environmental conditions in an engaging, accessible format. The StoryMap combines GIS mapping, drone imagery, and site-specific information to provide users with a detailed view of habitat restoration and monitoring areas across the port.
+
+A key component of the project was the creation of an interactive map tour that allows users to explore individual habitat sites by selecting points on the map. Each location includes high-resolution aerial imagery captured by drones, which I helped collect during field operations, along with site descriptions that provide context about habitat characteristics, restoration efforts, and environmental significance. For select locations, the StoryMap also incorporates drone flyover videos that offer a more immersive perspective of site conditions and landscape features.
+
+By integrating geospatial data, aerial imagery, and multimedia content into a single platform, the StoryMap transforms technical environmental information into an intuitive experience for staff, stakeholders, and the public. The project demonstrates the use of GIS storytelling and drone technology to improve environmental communication, increase site accessibility, and support a greater understanding of habitat conditions throughout the Port of Tacoma.
+
+**Skills & Technologies:**
+
+ArcGIS StoryMaps & Map Tour Development
+
+Drone Imagery Collection & Processing
+
+Habitat Assessment & Environmental GIS
+
+Interactive Web Mapping & Multimedia Integration
+
+GIS Storytelling & Public-Facing Communication
+
+Spatial Data Visualization & Site Documentation
+
+https://github.com/user-attachments/assets/10c80feb-7134-409c-aa90-2a8086c44c49
+
+
+
+
+
+
 
 **Port of Tacoma Shoreline Monitoring Experience Builder:**
 
@@ -79,7 +108,7 @@ I also developed an ArcGIS StoryMap to present the database in a more public-fac
 As part of the project, I presented the database and StoryMap to faculty, my department head, the Dean of Students, and an alumni group. These presentations focused on how the project could be added to the Cal Poly website as a recruitment, outreach, and fundraising tool. The goal was to help prospective students, alumni, donors, and community partners better understand the value of the City and Regional Planning program and the real-world impact of student studio work.
 
 
-**Key skills used:**
+**Skills and Technologies:**
 
 Geocoding
 
