@@ -1,3 +1,32 @@
+**Tacoma Tideflats Closed Landfill GIS & Cross-Section Automation:**
+
+This project involved developing an integrated GIS database and automated mapping workflow to organize, analyze, and visualize historical environmental information associated with the former Tacoma Tideflats closed landfill. I consolidated records from environmental investigations, parcel reports, historical inspections, methane monitoring, and cleanup-site resources into a structured geospatial framework. The completed inventory included 336 investigation locations, such as boreholes, monitoring wells, test pits, probes, and soil borings.
+
+I cleaned and standardized location identifiers, investigation types, contaminant descriptions, depth measurements, analytical results, and site-status categories. I also developed a data-matching workflow that connected investigation locations with available sampling-depth intervals while preserving match confidence and source-document references. Because many reports reused investigation identifiers, I incorporated composite identifiers and quality-control fields to reduce incorrect joins and maintain traceability to the original records.
+
+Using ArcGIS Pro, I created 2D, 3D, temporal, and cross-sectional visualizations to communicate the horizontal and vertical distribution of available environmental information. These products distinguished between confirmed exceedances, detections below applicable cleanup levels, observed landfill material, and locations without analytical data. The workflow was designed to prevent locations with missing analytical information from being incorrectly interpreted as clean and to avoid extending a single-depth result through an entire boring.
+
+A major component of the project was developing Python and ArcPy scripts to automate environmental cross-section mapping. The multi-section workflow processes cross-section lines, selects nearby investigation points, calculates each point’s station along the section, interprets available depth intervals, and generates separate ArcGIS Pro maps for sections XS_A through XS_E. For each section, the script creates ground-surface lines, investigation points, depth sticks, interval bands, label anchors, grid lines, axes, and distance and depth labels.
+
+The automation includes flexible field-name matching, null-safe depth parsing, duplicate-record handling, spatial-reference validation, configurable vertical exaggeration, automated symbology, and detailed error messaging. I also developed a depth-based concentric-buffer workflow that generated polygon rings at three-foot increments and designed the cross-section framework so additional environmental measurements, such as methane readings, could be added as value-based interval overlays.
+
+This project demonstrates my ability to transform fragmented historical and environmental records into a documented and reproducible GIS workflow. It combines environmental data management, spatial analysis, ArcPy automation, cross-section modeling, QA/QC, and technical communication to make complex subsurface information more accessible for environmental review and long-term site management.
+
+**Skills & Technologies:**
+
+ArcGIS Pro, Python & ArcPy Automation
+
+Environmental GIS Database Development & QA/QC
+
+Subsurface Cross-Section Modeling & Stationing
+
+Contaminant, Depth-Interval & Historical Record Integration
+
+2D, 3D & Temporal Environmental Visualization
+
+Geoprocessing, Symbology & Feature-Class Automation
+
+
 **Interactive Habitat Assessment StoryMap:**
 
 This project involved the development of an interactive ArcGIS StoryMap designed to showcase habitat assessment sites throughout the Port of Tacoma and communicate environmental conditions in an engaging, accessible format. The StoryMap combines GIS mapping, drone imagery, and site-specific information to provide users with a detailed view of habitat restoration and monitoring areas across the port.
