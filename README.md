@@ -5,16 +5,29 @@ Contributed to the development of a high-resolution bathymetric GIS dataset for 
 This project required extensive spatial data processing, terrain modeling, quality assurance, and geodatabase management to create a reliable depiction of submerged environments across active port facilities. The resulting bathymetric layers provide critical information for maritime infrastructure planning, dredging operations, navigational assessments, environmental monitoring, and long-term coastal management. By converting complex survey measurements into accessible geospatial products, this work helped support data-driven decision-making within one of the Pacific Northwest's largest and most strategically important ports.
 
 Skills & Technologies
+
 ArcGIS Pro
+
 Bathymetric Mapping
+
 Hydrographic Survey Data Processing
+
 TIN-to-Raster Conversion
+
 Raster Surface Development
+
 Spatial Analysis
+
 Terrain Modeling
+
 Geodatabase Management
+
 Quality Assurance / Quality Control (QA/QC)
+
 Coastal & Maritime GIS Applications
+
+
+
 <img width="2550" height="3300" alt="Bathy2" src="https://github.com/user-attachments/assets/86672c1a-431e-477c-8235-b6744dfeac63" />
 <img width="2550" height="3300" alt="Bathy1" src="https://github.com/user-attachments/assets/b775447a-be58-466d-baff-3a50a5d25ca0" />
 
