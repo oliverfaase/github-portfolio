@@ -192,10 +192,7 @@ mapping • GIS storytelling • Environmental communication
 
 <div align="center">
 
-https://img.shields.io/badge/ArcGIS-Experience_Builder-2563EB?style=flat-square&logo=esri&logoColor=white
-https://img.shields.io/badge/ArcGIS-Online-1D4ED8?style=flat-square&logo=esri&logoColor=white
-https://img.shields.io/badge/Workflow-GeoAI-7C3AED?style=flat-square
-https://img.shields.io/badge/Focus-Shoreline_Monitoring-0284C7?style=flat-square
+[![Open Shoreline OIC 2026](https://img.shields.io/badge/Open-Shoreline_OIC_2026-007AC2?style=for-the-badge&logo=esri&logoColor=white)](https://experience.arcgis.com/experience/2ae6a4ebd3244c9599fbf294d595d3f1
 
 </div>
 
