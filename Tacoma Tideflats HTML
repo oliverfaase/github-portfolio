@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Tacoma Tideflats Closed Landfill GIS and Cross-Section Automation portfolio project by Oliver Faase."
+  >
+
+  <title>Tacoma Tideflats Landfill GIS | Oliver Faase</title>
+
+  <style>
+    :root {
+      --forest: #285943;
+      --forest-dark: #183c2e;
+      --teal: #00796b;
+      --teal-dark: #006056;
+      --water: #2c7ac3;
+      --cream: #f4f7f5;
+      --white: #ffffff;
+      --text: #24332d;
+      --muted: #627269;
+      --border: #d7e2dc;
+      --shadow: 0 10px 30px rgba(28, 67, 51, 0.10);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--text);
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Helvetica,
+        Arial,
+        sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 56px 24px;
+      color: var(--white);
+      text-align: center;
+      background:
+        linear-gradient(
+          135deg,
+          var(--forest-dark) 0%,
+          var(--teal) 55%,
+          var(--water) 100%
+        );
+    }
+
+    header h1 {
+      max-width: 1050px;
+      margin: 0 auto 14px;
+      font-size: clamp(2rem, 5vw, 3.6rem);
+      line-height: 1.15;
+    }
+
+    header p {
+      max-width: 900px;
+      margin: 0 auto;
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      opacity: 0.95;
+    }
+
+    .header-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .header-button {
+      display: inline-block;
+      padding: 12px 19px;
+      border: 1px solid rgba(255, 255, 255, 0.75);
+      border-radius: 8px;
+      color: var(--white);
+      font-weight: 700;
+      text-decoration: none;
+      background: rgba(255, 255, 255, 0.12);
+      transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .header-button:hover,
+    .header-button:focus {
+      background: rgba(255, 255, 255, 0.24);
+      transform: translateY(-1px);
+    }
+
+    main {
+      width: min(1240px, calc(100% - 32px));
+      margin: 34px auto 60px;
+    }
+
+    .card {
+      padding: 30px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .card h2 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      color: var(--forest);
+      font-size: 1.7rem;
+    }
+
+    .card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 26px;
+    }
+
+    .metric {
+      padding: 22px 18px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      text-align: center;
+      background: #f8fbf9;
+    }
+
+    .metric strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--teal);
+      font-size: 1.9rem;
+      line-height: 1.2;
+    }
+
+    .metric span {
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .viewer-section {
+      margin-top: 32px;
+      padding: 22px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .viewer-heading {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+
+    .viewer-heading h2 {
+      margin: 0;
+      color: var(--forest);
+      font-size: 1.7rem;
+    }
+
+    .pdf-button {
+      display: inline-block;
+      padding: 11px 17px;
+      border-radius: 8px;
+      color: var(--white);
+      font-weight: 700;
+      text-decoration: none;
+      background: var(--teal);
+      transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .pdf-button:hover,
+    .pdf-button:focus {
+      background: var(--teal-dark);
+      transform: translateY(-1px);
+    }
+
+    .pdf-viewer {
+      display: block;
+      width: 100%;
+      height: 85vh;
+      min-height: 720px;
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      background: #eeeeee;
+    }
+
+    .viewer-note {
+      margin: 15px 0 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+      text-align: center;
+    }
+
+    .viewer-note a {
+      color: var(--teal);
+      font-weight: 700;
+    }
+
+    footer {
+      padding: 30px 20px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    footer a {
+      color: var(--teal);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    footer a:hover,
+    footer a:focus {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 760px) {
+      header {
+        padding: 42px 18px;
+      }
+
+      main {
+        width: min(100% - 20px, 1240px);
+        margin-top: 20px;
+      }
+
+      .card,
+      .viewer-section {
+        padding: 18px;
+      }
+
+      .metrics {
+        grid-template-columns: 1fr;
+      }
+
+      .viewer-heading {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .pdf-viewer {
+        height: 75vh;
+        min-height: 540px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Tacoma Tideflats Closed Landfill GIS</h1>
+
+    <p>
+      Environmental database development, historical-record integration,
+      subsurface cross-section automation, QA/QC, and GIS-based technical
+      communication.
+    </p>
+
+    <div class="header-buttons">
+
+      https://github.com/oliverfaase/github-portfolio
+        Return to Portfolio Repository
+      </a>
+
+      <a
+        class="header-button"
+        href="https://github.com/oliverfaase/github-portfolio/releases/tag/TacomaTideflats"
+      >
+        Download ArcGIS Pro Project
+      </a>
+
+      <a
+        class="header-button"
+        href="mailto:faaseoliver@gmail.com"
+      >
+        Contact Oliver
+      </a>
+
+    </div>
+  </header>
+
+  <main>
+
+    <section class="card">
+      <h2>Project Fact Sheet</h2>
+
+      <p>
+        This fact sheet documents the interpreted former landfill footprint,
+        Port parcels, measured subsurface cross sections, environmental
+        investigation records, contaminant screening, habitat areas, and
+        methane-monitoring network.
+      </p>
+
+      <p>
+        The project integrates historical environmental records with an
+        automated Python and ArcPy workflow designed to improve data
+        traceability, subsurface visualization, QA/QC, and technical
+        communication.
+      </p>
+
+      <div class="metrics">
+
+        <div class="metric">
+          <strong>336+</strong>
+          <span>
+            Investigation locations organized during GIS database development
+          </span>
+        </div>
+
+        <div class="metric">
+          <strong>5</strong>
+          <span>
+            Automated measured subsurface cross sections
+          </span>
+        </div>
+
+        <div class="metric">
+          <strong>20</strong>
+          <span>
+            Pages of maps, findings, methods, and documentation
+          </span>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="viewer-section">
+
+      <div class="viewer-heading">
+
+        <h2>Read the Complete Fact Sheet</h2>
+
+        ./documents/TacomaTideflatsLandfill_FactSheet_POT_1.pdf
+          Open PDF in New Tab
+        </a>
+
+      </div>
+
+      ./documents/TacomaTideflatsLandfill_FactSheet_POT_1.pdf
+        <p>
+          The browser cannot display the embedded PDF.
+          ./documents/TacomaTideflatsLandfill_FactSheet_POT_1.pdf
+            Open the complete fact sheet.
+          </a>
+        </p>
+      </iframe>
+
+      <p class="viewer-note">
+        Scroll within the viewer to read all pages. If the embedded viewer
+        does not load on your device,
+        ./documents/TacomaTideflatsLandfill_FactSheet_POT_1.pdf
+          open the complete PDF here
+        </a>.
+      </p>
+
+    </section>
+
+  </main>
+
+  <footer>
+    Oliver Faase • GIS • Environmental Planning • Geospatial Automation
+    <br>
+    <a href="mailto:faaseoliver@gmail.com">
+      faaseoliver@gmail.com
+    </a>
+    •
+    <a
+      href="https://www.linkedin.com/in/oliverfaase/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      LinkedIn
+    </a>
+  </footer>
+
+</body>
+</html>
