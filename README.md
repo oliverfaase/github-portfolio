@@ -2,7 +2,7 @@
 
 # 🌎 Oliver Faase
 
-### Environmental GIS • Geospatial Automation • Drone Mapping • Spatial Storytelling
+### GIS • Environmental Planning • Geospatial Automation • Drone Mapping • Spatial Storytelling
 
 I transform complex environmental information into reproducible GIS workflows,  
 interactive applications, and decision-ready visualizations.
@@ -18,7 +18,7 @@ interactive applications, and decision-ready visualizations.
 
 ## 🌿 About Me
 
-I am an **Environmental GIS Intern** specializing in environmental data management, ArcGIS automation, subsurface visualization, drone imagery, interactive web mapping, and public-facing GIS communication.
+I am an **Environmental GIS Intern** specializing in environmental planning, spatial data management, ArcGIS automation, subsurface visualization, drone imagery, interactive web mapping, and public-facing GIS communication.
 
 My work focuses on creating geospatial systems that are:
 
@@ -26,11 +26,12 @@ My work focuses on creating geospatial systems that are:
 - **Reproducible**, through Python, ArcPy, and documented GIS workflows
 - **Spatially accurate**, with validated coordinate systems and QA/QC procedures
 - **Accessible**, through maps, imagery, applications, and multimedia
-- **Decision-ready**, for environmental monitoring, review, and site management
+- **Decision-ready**, for environmental monitoring, planning, review, and site management
 
 ### Areas of Interest
 
-- Environmental and coastal GIS
+- Environmental planning and GIS
+- Coastal and shoreline analysis
 - Python and ArcPy automation
 - Subsurface data visualization
 - Drone-based environmental monitoring
@@ -43,20 +44,18 @@ My work focuses on creating geospatial systems that are:
 ## 📍 Portfolio at a Glance
 
 <div align="center">
-
 <table>
-  <tr>
-    <td align="center" width="33%"><h3>336+</h3><strong>Investigation Locations</strong><br><sub>Environmental GIS inventory</sub></td>
-    <td align="center" width="33%"><h3>5</h3><strong>Automated Cross Sections</strong><br><sub>Python and ArcPy workflow</sub></td>
-    <td align="center" width="33%"><h3>2D + 3D + Temporal</h3><strong>GIS Visualization</strong><br><sub>Environmental communication</sub></td>
-  </tr>
-  <tr>
-    <td align="center"><h3>🚁</h3><strong>Drone Monitoring</strong><br><sub>Repeatable aerial imagery</sub></td>
-    <td align="center"><h3>🌊</h3><strong>Coastal GIS</strong><br><sub>Shoreline and bathymetry</sub></td>
-    <td align="center"><h3>🗺️</h3><strong>Interactive GIS</strong><br><sub>StoryMaps and applications</sub></td>
-  </tr>
+<tr>
+<td align="center" width="33%"><h3>336+</h3><strong>Investigation Locations</strong><br><sub>Environmental GIS inventory</sub></td>
+<td align="center" width="33%"><h3>5</h3><strong>Automated Cross Sections</strong><br><sub>Python and ArcPy workflow</sub></td>
+<td align="center" width="33%"><h3>2D + 3D + Temporal</h3><strong>GIS Visualization</strong><br><sub>Environmental communication</sub></td>
+</tr>
+<tr>
+<td align="center"><h3>🚁</h3><strong>Drone Monitoring</strong><br><sub>Repeatable aerial imagery</sub></td>
+<td align="center"><h3>🌊</h3><strong>Coastal GIS</strong><br><sub>Shoreline and bathymetry</sub></td>
+<td align="center"><h3>🗺️</h3><strong>Interactive GIS</strong><br><sub>StoryMaps and applications</sub></td>
+</tr>
 </table>
-
 </div>
 
 ---
@@ -84,9 +83,7 @@ The completed inventory includes **336 investigation locations**, including bore
 
 ### Project Contributions
 
-- Standardized investigation identifiers and investigation types
-- Cleaned contaminant descriptions and analytical-result categories
-- Standardized depth measurements and sampling intervals
+- Standardized investigation identifiers, investigation types, contaminant descriptions, and depth measurements
 - Connected investigation locations to available sampling-depth records
 - Preserved source-document references and data-match confidence
 - Used composite identifiers to reduce incorrect joins
@@ -96,18 +93,14 @@ The completed inventory includes **336 investigation locations**, including bore
 
 ### Automated Cross-Section Workflow
 
-The Python and ArcPy automation:
-
 1. Processes cross-section lines
 2. Selects nearby investigation locations
 3. Calculates each location's station along the section
 4. Interprets and validates sampling-depth intervals
 5. Generates maps for sections **XS_A through XS_E**
-6. Creates ground-surface lines and investigation points
-7. Creates depth sticks and analytical interval bands
-8. Generates label anchors, grids, axes, and annotations
-9. Applies configurable vertical exaggeration
-10. Automates feature-class creation and symbology
+6. Creates ground-surface lines, investigation points, and depth sticks
+7. Creates analytical interval bands, labels, grids, and axes
+8. Applies configurable vertical exaggeration and automated symbology
 
 <details>
 <summary><strong>View technical and QA/QC details</strong></summary>
@@ -119,11 +112,9 @@ The Python and ArcPy automation:
 - Duplicate-record handling
 - Composite investigation identifiers
 - Spatial-reference validation
-- Configurable selection distances
-- Configurable vertical exaggeration
+- Configurable selection distances and vertical exaggeration
 - Automated feature-class creation and symbology
-- Source-document traceability
-- Match-confidence fields
+- Source-document traceability and match-confidence fields
 - Detailed error and status messages
 
 I also developed a depth-based concentric-buffer workflow that generates polygon rings at three-foot increments. The framework can incorporate additional measurements, including methane readings, as value-based depth-interval overlays.
@@ -132,7 +123,19 @@ I also developed a depth-based concentric-buffer workflow that generates polygon
 
 ### Portfolio Materials
 
-> The project preview, PDF case study, and sanitized ArcGIS Pro package will be added after they are prepared and approved for portfolio use.
+<div align="center">
+
+[![Read the Complete Project Fact Sheet](https://img.shields.io/badge/Read-Complete_Project_Fact_Sheet-C62828?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)](https://oliverfaase.github.io/github-portfolio/tacoma-tideflats.html)
+
+[![Download the ArcGIS Pro Project](https://img.shields.io/badge/Download-ArcGIS_Pro_Project-2C7AC3?style=for-the-badge&logo=esri&logoColor=white)](https://github.com/oliverfaase/github-portfolio/releases/tag/TacomaTideflats)
+
+<br><br>
+
+<sub>
+Read the complete 20-page project fact sheet in the scrollable GitHub Pages viewer, or open the GitHub Release to download the ZIP containing the packaged ArcGIS Pro project.
+</sub>
+
+</div>
 
 ### Project Value
 
@@ -158,7 +161,7 @@ This project demonstrates my ability to transform fragmented historical and envi
 
 I developed an interactive ArcGIS StoryMap showcasing habitat assessment and restoration sites throughout the Port of Tacoma.
 
-The StoryMap combines interactive GIS mapping, high-resolution drone imagery, site descriptions, and aerial flyover videos. Visitors can navigate between habitat locations and explore environmental conditions, restoration work, and the environmental significance of individual sites.
+The StoryMap combines interactive GIS mapping, high-resolution drone imagery, site descriptions, and aerial flyover videos. Visitors can navigate among habitat locations and explore environmental conditions, restoration work, and the significance of individual sites.
 
 ### Project Contributions
 
@@ -167,9 +170,7 @@ The StoryMap combines interactive GIS mapping, high-resolution drone imagery, si
 - Integrated high-resolution drone imagery
 - Helped collect aerial imagery during field operations
 - Incorporated drone flyover videos for selected locations
-- Created an accessible public-facing GIS experience
-- Translated technical environmental information into a visual narrative
-- Designed content for staff, stakeholders, and public audiences
+- Translated technical environmental information into an accessible visual narrative
 
 ### Project Video
 
@@ -210,7 +211,7 @@ Public and Stakeholder Communication
 
 ### Project Value
 
-By combining geospatial data, aerial imagery, and multimedia content, the StoryMap transforms technical environmental information into an intuitive and engaging experience. The project demonstrates how GIS storytelling and drone technology can improve environmental communication and understanding of habitat conditions and restoration activities.
+By combining geospatial data, aerial imagery, and multimedia content, the StoryMap transforms technical environmental information into an intuitive and engaging experience. It demonstrates how GIS storytelling and drone technology can improve environmental communication and understanding of habitat conditions and restoration activities.
 
 **Skills and technologies:** ArcGIS StoryMaps, ArcGIS Online, drone imagery, habitat assessment, environmental GIS, interactive web mapping, multimedia integration, site documentation, and public-facing GIS communication.
 
@@ -231,20 +232,17 @@ By combining geospatial data, aerial imagery, and multimedia content, the StoryM
 
 ### Project Overview
 
-I developed an ArcGIS Experience Builder application supporting long-term shoreline monitoring throughout the Port of Tacoma.
-
-The application displays shoreline monitoring locations as interactive map points and provides an organized way to review environmental conditions across multiple sites and monitoring periods.
+I developed an ArcGIS Experience Builder application supporting long-term shoreline monitoring throughout the Port of Tacoma. The application displays monitoring locations as interactive map points and organizes environmental conditions across multiple sites and time periods.
 
 ### Project Contributions
 
 - Developed an interactive shoreline-monitoring application
 - Organized monitoring locations within a centralized GIS platform
 - Integrated repeatable drone imagery from predefined flight locations
-- Supported comparison of shoreline conditions across monitoring periods
-- Structured imagery for consistent year-over-year visual analysis
+- Supported year-over-year comparison of shoreline conditions
+- Structured imagery for consistent temporal analysis
 - Incorporated GeoAI-assisted image-comparison workflows
-- Designed the application for environmental review and site documentation
-- Improved access to shoreline imagery and monitoring information
+- Designed the application for environmental review and documentation
 
 ### Project Media
 
@@ -256,13 +254,11 @@ The application displays shoreline monitoring locations as interactive map point
 
 </div>
 
-### Repeatable Monitoring Approach
+### Monitoring and Analysis
 
-Predefined drone flight locations and automated flight plans allow photographs to be captured from consistent positions and viewing angles. This supports comparison of vegetation change, sediment deposition, shoreline erosion, bank stability, habitat shifts, and other visible environmental changes.
+Predefined drone flight locations and automated flight plans allow imagery to be collected from consistent positions and viewing angles. This supports comparison of vegetation change, sediment deposition, erosion, bank stability, habitat shifts, and other visible environmental changes.
 
-### GeoAI-Assisted Analysis
-
-The project incorporates GeoAI-assisted workflows that compare imagery from different monitoring periods and help identify potential shoreline changes. Automated comparison directs attention toward locations that may require closer environmental review.
+The project also incorporates GeoAI-assisted workflows that compare imagery from different monitoring periods and identify locations that may require closer review.
 
 <details>
 <summary><strong>View the shoreline-monitoring workflow</strong></summary>
@@ -283,15 +279,13 @@ Experience Builder Visualization
 Temporal Image Comparison
                 ↓
 GeoAI-Assisted Change Identification
-                ↓
-Environmental Review and Documentation
 ```
 
 </details>
 
 ### Project Value
 
-The application provides a centralized platform for organizing drone imagery, visualizing shoreline conditions, comparing monitoring periods, and supporting long-term environmental management.
+The application centralizes drone imagery, shoreline visualization, temporal comparison, and environmental documentation. It improves monitoring consistency and reduces the time required to locate and compare imagery from different survey periods.
 
 > **Sharing note:** The live application and its underlying environmental data are not linked. The approved media and description demonstrate the workflow without sharing restricted content.
 
@@ -316,7 +310,7 @@ The application provides a centralized platform for organizing drone imagery, vi
 
 I contributed to the development of a high-resolution bathymetric GIS dataset for the Port of Tacoma by transforming hydrographic survey information into an accurate representation of underwater terrain and seafloor topography.
 
-I processed and converted Triangulated Irregular Network surfaces into raster datasets, making the survey information easier to analyze, visualize, and integrate with other geospatial resources. I also developed raster surfaces constrained to complex, curved shoreline and waterway boundaries to preserve spatial precision.
+I converted Triangulated Irregular Network surfaces into raster datasets and developed raster surfaces constrained to complex, curved shoreline and waterway boundaries. This improved analysis, visualization, integration, and spatial precision.
 
 ### Project Contributions
 
@@ -327,21 +321,17 @@ I processed and converted Triangulated Irregular Network surfaces into raster da
 - Conducted terrain-modeling and spatial-processing operations
 - Evaluated outputs for gaps and boundary inconsistencies
 - Performed geodatabase management and quality assurance
-- Prepared bathymetric layers for analysis and visualization
 
 ### Project Media
 
 <div align="center">
-
 <table>
-  <tr>
-    <td width="50%" valign="top"><img src="https://github.com/user-attachments/assets/86672c1a-431e-477c-8235-b6744dfeac63" alt="Port of Tacoma bathymetric surface visualization" width="100%"></td>
-    <td width="50%" valign="top"><img src="https://github.com/user-attachments/assets/b775447a-be58-466d-baff-3a50a5d25ca0" alt="Port of Tacoma bathymetric mapping product" width="100%"></td>
-  </tr>
+<tr>
+<td width="50%" valign="top"><img src="https://github.com/user-attachments/assets/86672c1a-431e-477c-8235-b6744dfeac63" alt="Port of Tacoma bathymetric surface visualization" width="100%"></td>
+<td width="50%" valign="top"><img src="https://github.com/user-attachments/assets/b775447a-be58-466d-baff-3a50a5d25ca0" alt="Port of Tacoma bathymetric mapping product" width="100%"></td>
+</tr>
 </table>
-
 <p><em>Bathymetric mapping products developed from hydrographic survey data.</em></p>
-
 </div>
 
 ### Project Applications
@@ -373,8 +363,6 @@ Shoreline Boundary Constraints
 Surface QA/QC
              ↓
 Bathymetric Visualization
-             ↓
-Coastal and Maritime Analysis
 ```
 
 </details>
@@ -404,7 +392,7 @@ The project transformed complex hydrographic measurements into accessible geospa
 
 I created a GIS database and interactive StoryMap to organize, map, and showcase past Cal Poly City and Regional Planning studio projects.
 
-I compiled historical studio-project records, cleaned and standardized the attribute data, and geocoded each project for display in an interactive web map. The resulting database transformed a list of past studio work into a spatial and searchable resource demonstrating the geographic reach and impact of the program.
+I compiled historical studio-project records, cleaned and standardized their attributes, and geocoded each project for display in an interactive web map. The database transformed a list of studio work into a spatial and searchable resource demonstrating the geographic reach and impact of the program.
 
 ### Project Contributions
 
@@ -436,30 +424,15 @@ I compiled historical studio-project records, cleaned and standardized the attri
 
 ### Searchable Project Categories
 
-- Location
-- Year
-- Program level
-- Project type
-- Instructor
-- Housing
-- Transportation
-- Climate change
-- Policy planning
-- Urban design
+Location • Year • Program level • Project type • Instructor • Housing • Transportation • Climate change • Policy planning • Urban design
 
 ### Interactive Storytelling
 
-The StoryMap includes an interactive project map and a featured studio example covering:
-
-1. Site analysis and GIS
-2. Community outreach and engagement
-3. Design development
-4. Public presentations
-5. Final project deliverables
+The StoryMap includes an interactive project map and a featured studio example covering site analysis and GIS, community outreach, design development, public presentations, and final deliverables.
 
 ### Stakeholder Communication
 
-I presented the database and StoryMap to faculty, my department head, university leadership, and an alumni group. The presentations demonstrated how the project could support student recruitment, program outreach, alumni engagement, community partnerships, fundraising, and communication of student-project impact.
+I presented the database and StoryMap to faculty, my department head, university leadership, and an alumni group. The presentations demonstrated how the project could support recruitment, outreach, alumni engagement, community partnerships, fundraising, and communication of student-project impact.
 
 <details>
 <summary><strong>View the GIS database and StoryMap workflow</strong></summary>
@@ -512,7 +485,7 @@ The project makes planning-studio work easier to explore by connecting each proj
 
 <br>
 
-![Environmental GIS](https://img.shields.io/badge/Environmental_GIS-4D7C0F?style=for-the-badge)
+![Environmental Planning](https://img.shields.io/badge/Environmental_Planning-4D7C0F?style=for-the-badge)
 ![Drone Imagery](https://img.shields.io/badge/Drone_Imagery-00796B?style=for-the-badge)
 ![Terrain Modeling](https://img.shields.io/badge/Terrain_Modeling-92400E?style=for-the-badge)
 ![GeoAI](https://img.shields.io/badge/GeoAI-7C3AED?style=for-the-badge)
@@ -531,7 +504,7 @@ flowchart LR
     D --> E[Spatial Analysis]
     E --> F[Python and ArcPy]
     F --> G[Maps and Applications]
-    G --> H[Environmental Decisions]
+    G --> H[Planning and Environmental Decisions]
 ```
 
 ### Core Principles
@@ -548,7 +521,7 @@ flowchart LR
 
 # 📫 Connect With Me
 
-I am interested in environmental GIS, geospatial automation, spatial data science, shoreline monitoring, drone-based mapping, coastal planning, and tools that make environmental information easier to understand.
+I am interested in GIS, environmental planning, geospatial automation, spatial data science, shoreline monitoring, drone-based mapping, coastal planning, and tools that make environmental information easier to understand.
 
 <div align="center">
 
@@ -557,6 +530,6 @@ I am interested in environmental GIS, geospatial automation, spatial data scienc
 
 <br><br>
 
-### 🌎 Environmental GIS • 🗺️ Automation • 🌿 Visualization • 🌊 Communication
+### 🌎 GIS • 🌿 Environmental Planning • 🗺️ Automation • 🌊 Spatial Communication
 
 </div>
