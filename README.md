@@ -273,6 +273,10 @@ Interactive Map Tour
 Environmental Storytelling
              ↓
 Public and Stakeholder Communication
+```
+
+</details>
+
 ---
 
 ## 03 | Shoreline OIC 2026 Experience Builder
