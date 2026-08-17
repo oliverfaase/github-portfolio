@@ -373,7 +373,12 @@ Temporal Image Comparison
 GeoAI-Assisted Change Identification
                 ↓
 Environmental Review and Documentation
+```
+
+</details>
+
 ---
+
 
 ## 04 | Port of Tacoma Bathymetric Surface Development
 
@@ -486,7 +491,12 @@ Surface QA/QC
 Bathymetric Visualization
              ↓
 Coastal and Maritime Analysis
+```
+
+</details>
+
 ---
+
 
 ## 05 | Cal Poly City and Regional Planning GIS Database and StoryMap
 
