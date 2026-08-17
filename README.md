@@ -3,20 +3,6 @@
 OLIVER FAASE | ENVIRONMENTAL GIS PORTFOLIO
 ===============================================================================
 
-PUBLIC LINKS INCLUDED:
-1. Habitat Assessment StoryMap
-2. Cal Poly CRP Studio StoryMap
-3. Email
-4. LinkedIn
-
-NOT PUBLICLY LINKED:
-1. Shoreline OIC Experience Builder
-2. Tacoma Tideflats landfill project
-3. Bathymetric source files
-
-Before publishing:
-- Confirm that all images and videos are approved for portfolio use.
-- Add the landfill PDF and project package when they are ready.
 ===============================================================================
 -->
 
