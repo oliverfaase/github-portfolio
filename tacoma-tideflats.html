@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
 
@@ -11,24 +10,24 @@
 
   <meta
     name="description"
-    content="Tacoma Tideflats Closed Landfill GIS and Cross-Section Automation portfolio project by Oliver Faase."
+    content="Tacoma Tideflats Closed Landfill GIS and Cross-Section Automation project fact sheet by Oliver Faase."
   >
 
   <title>Tacoma Tideflats Landfill GIS | Oliver Faase</title>
 
   <style>
     :root {
-      --forest: #285943;
       --forest-dark: #183c2e;
+      --forest: #285943;
       --teal: #00796b;
-      --teal-dark: #006056;
+      --teal-dark: #005f55;
       --water: #2c7ac3;
       --cream: #f4f7f5;
       --white: #ffffff;
       --text: #24332d;
       --muted: #627269;
       --border: #d7e2dc;
-      --shadow: 0 10px 30px rgba(28, 67, 51, 0.10);
+      --shadow: 0 10px 30px rgba(28, 67, 51, 0.12);
     }
 
     * {
@@ -53,8 +52,12 @@
       line-height: 1.6;
     }
 
-    header {
-      padding: 56px 24px;
+    a {
+      color: inherit;
+    }
+
+    .site-header {
+      padding: 48px 24px;
       color: var(--white);
       text-align: center;
       background:
@@ -66,18 +69,18 @@
         );
     }
 
-    header h1 {
+    .site-header h1 {
       max-width: 1050px;
       margin: 0 auto 14px;
-      font-size: clamp(2rem, 5vw, 3.6rem);
+      font-size: clamp(2rem, 5vw, 3.5rem);
       line-height: 1.15;
     }
 
-    header p {
+    .site-header p {
       max-width: 900px;
       margin: 0 auto;
       font-size: clamp(1rem, 2vw, 1.2rem);
-      opacity: 0.95;
+      opacity: 0.96;
     }
 
     .header-buttons {
@@ -85,42 +88,41 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 12px;
-      margin-top: 30px;
+      margin-top: 28px;
     }
 
     .header-button {
       display: inline-block;
-      padding: 12px 19px;
+      padding: 12px 18px;
       border: 1px solid rgba(255, 255, 255, 0.75);
       border-radius: 8px;
+      background: rgba(255, 255, 255, 0.12);
       color: var(--white);
       font-weight: 700;
       text-decoration: none;
-      background: rgba(255, 255, 255, 0.12);
       transition:
         background-color 0.2s ease,
         transform 0.2s ease;
     }
 
-    .header-button:hover,
-    .header-button:focus {
+    .header-button:hover {
       background: rgba(255, 255, 255, 0.24);
       transform: translateY(-1px);
     }
 
     .header-button:focus-visible,
     .pdf-button:focus-visible,
-    footer a:focus-visible {
-      outline: 3px solid #ffffff;
+    .text-link:focus-visible {
+      outline: 3px solid #ffd54f;
       outline-offset: 3px;
     }
 
     main {
-      width: min(1240px, calc(100% - 32px));
-      margin: 34px auto 60px;
+      width: min(1300px, calc(100% - 32px));
+      margin: 32px auto 60px;
     }
 
-    .card {
+    .overview-card {
       padding: 30px;
       border: 1px solid var(--border);
       border-radius: 14px;
@@ -128,14 +130,17 @@
       box-shadow: var(--shadow);
     }
 
-    .card h2 {
-      margin-top: 0;
-      margin-bottom: 12px;
+    .overview-card h2 {
+      margin: 0 0 12px;
       color: var(--forest);
       font-size: 1.7rem;
     }
 
-    .card p:last-child {
+    .overview-card p {
+      max-width: 1000px;
+    }
+
+    .overview-card p:last-of-type {
       margin-bottom: 0;
     }
 
@@ -150,8 +155,8 @@
       padding: 22px 18px;
       border: 1px solid var(--border);
       border-radius: 10px;
-      text-align: center;
       background: #f8fbf9;
+      text-align: center;
     }
 
     .metric strong {
@@ -168,7 +173,7 @@
     }
 
     .viewer-section {
-      margin-top: 32px;
+      margin-top: 30px;
       padding: 22px;
       border: 1px solid var(--border);
       border-radius: 14px;
@@ -176,7 +181,7 @@
       box-shadow: var(--shadow);
     }
 
-    .viewer-heading {
+    .viewer-toolbar {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
@@ -185,89 +190,93 @@
       margin-bottom: 18px;
     }
 
-    .viewer-heading h2 {
+    .viewer-toolbar h2 {
       margin: 0;
       color: var(--forest);
       font-size: 1.7rem;
+    }
+
+    .viewer-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
     }
 
     .pdf-button {
       display: inline-block;
       padding: 11px 17px;
       border-radius: 8px;
+      background: var(--teal);
       color: var(--white);
       font-weight: 700;
       text-decoration: none;
-      background: var(--teal);
       transition:
         background-color 0.2s ease,
         transform 0.2s ease;
     }
 
-    .pdf-button:hover,
-    .pdf-button:focus {
+    .pdf-button:hover {
       background: var(--teal-dark);
       transform: translateY(-1px);
     }
 
-    .pdf-button:focus-visible {
-      outline-color: var(--teal);
+    .pdf-button.secondary {
+      background: var(--water);
     }
 
-    .pdf-viewer {
+    .pdf-button.secondary:hover {
+      background: #245f98;
+    }
+
+    .pdf-reader {
       display: block;
       width: 100%;
-      height: 85vh;
-      min-height: 720px;
+      height: 88vh;
+      min-height: 800px;
       border: 1px solid var(--border);
       border-radius: 9px;
-      background: #eeeeee;
+      background: #e9eeeb;
     }
 
     .viewer-note {
       margin: 15px 0 0;
       color: var(--muted);
-      font-size: 0.92rem;
+      font-size: 0.94rem;
       text-align: center;
     }
 
-    .viewer-note a {
+    .text-link {
       color: var(--teal);
       font-weight: 700;
     }
 
-    footer {
-      padding: 30px 20px;
+    .site-footer {
+      padding: 32px 20px;
       color: var(--muted);
       text-align: center;
     }
 
-    footer a {
+    .site-footer a {
       color: var(--teal);
       font-weight: 700;
       text-decoration: none;
     }
 
-    footer a:hover,
-    footer a:focus {
+    .site-footer a:hover {
       text-decoration: underline;
     }
 
-    footer a:focus-visible {
-      outline-color: var(--teal);
-    }
-
     @media (max-width: 760px) {
-      header {
-        padding: 42px 18px;
+      .site-header {
+        padding: 40px 18px;
       }
 
       main {
-        width: min(100% - 20px, 1240px);
+        width: calc(100% - 20px);
         margin-top: 20px;
       }
 
-      .card,
+      .overview-card,
       .viewer-section {
         padding: 18px;
       }
@@ -276,22 +285,30 @@
         grid-template-columns: 1fr;
       }
 
-      .viewer-heading {
+      .viewer-toolbar {
         align-items: flex-start;
         flex-direction: column;
       }
 
-      .pdf-viewer {
-        height: 75vh;
-        min-height: 540px;
+      .viewer-actions {
+        width: 100%;
+      }
+
+      .pdf-button {
+        flex: 1;
+        text-align: center;
+      }
+
+      .pdf-reader {
+        height: 78vh;
+        min-height: 600px;
       }
     }
   </style>
 </head>
 
 <body>
-
-  <header>
+  <header class="site-header">
     <h1>Tacoma Tideflats Closed Landfill GIS</h1>
 
     <p>
@@ -301,12 +318,11 @@
     </p>
 
     <nav class="header-buttons" aria-label="Project navigation">
-
       <a
         class="header-button"
         href="https://github.com/oliverfaase/github-portfolio"
       >
-        Return to Portfolio Repository
+        Return to Portfolio
       </a>
 
       <a
@@ -324,14 +340,14 @@
       >
         Contact Oliver
       </a>
-
     </nav>
   </header>
 
   <main>
-
-    <section class="card" aria-labelledby="project-overview-heading">
-
+    <section
+      class="overview-card"
+      aria-labelledby="project-overview-heading"
+    >
       <h2 id="project-overview-heading">Project Fact Sheet</h2>
 
       <p>
@@ -349,7 +365,6 @@
       </p>
 
       <div class="metrics">
-
         <div class="metric">
           <strong>336+</strong>
           <span>
@@ -370,25 +385,25 @@
             Pages of maps, findings, methods, and documentation
           </span>
         </div>
-
       </div>
     </section>
 
     <section
       class="viewer-section"
-      aria-labelledby="pdf-viewer-heading"
+      aria-labelledby="pdf-reader-heading"
     >
+      <div class="viewer-toolbar">
+        <h2 id="pdf-reader-heading">Read the Complete Fact Sheet</h2>
 
-      <div class="viewer-heading">
+        <div class="viewer-actions">
+          ./documents/TacomaTideflatsLandfill_FactSheet_POT_1.pdf
+            Open PDF in New Tab
+          </a>
 
-        <h2 id="pdf-viewer-heading">
-          Read the Complete Fact Sheet
-        </h2>
-
-        ./documents/TacomaTideflatsLandfill_FactSheet_POT_1.pdf
-          Open PDF in New Tab
-        </a>
-
+          ./documents/TacomaTideflatsLandfill_FactSheet_POT_1.pdf
+            Download PDF
+          </a>
+        </div>
       </div>
 
       ./documents/TacomaTideflatsLandfill_FactSheet_POT_1.pdf#view=FitH
@@ -401,18 +416,16 @@
       </iframe>
 
       <p class="viewer-note">
-        Scroll within the viewer to read all pages. If the embedded viewer
-        does not load on your device,
+        Scroll inside the reader to view all 20 pages. If the reader does not
+        load on your device,
         ./documents/TacomaTideflatsLandfill_FactSheet_POT_1.pdf
-          open the complete PDF here
+          open the PDF directly
         </a>.
       </p>
-
     </section>
-
   </main>
 
-  <footer>
+  <footer class="site-footer">
     Oliver Faase • GIS • Environmental Planning • Geospatial Automation
     <br>
 
@@ -430,7 +443,5 @@
       LinkedIn
     </a>
   </footer>
-
 </body>
-
 </html>
