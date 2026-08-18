@@ -10,7 +10,7 @@
 
   <meta
     name="description"
-    content="Tacoma Tideflats Closed Landfill GIS and Cross-Section Automation project fact sheet by Oliver Faase."
+    content="Scrollable project fact sheet for the Tacoma Tideflats Closed Landfill GIS and Cross-Section Automation project by Oliver Faase."
   >
 
   <title>Tacoma Tideflats Landfill GIS | Oliver Faase</title>
@@ -22,12 +22,16 @@
       --teal: #00796b;
       --teal-dark: #005f55;
       --water: #2c7ac3;
+      --water-dark: #215e96;
       --cream: #f4f7f5;
       --white: #ffffff;
+      --reader-background: #dfe7e3;
       --text: #24332d;
       --muted: #627269;
       --border: #d7e2dc;
+      --danger: #b42318;
       --shadow: 0 10px 30px rgba(28, 67, 51, 0.12);
+      --page-shadow: 0 8px 24px rgba(24, 60, 46, 0.18);
     }
 
     * {
@@ -52,12 +56,13 @@
       line-height: 1.6;
     }
 
+    button,
     a {
-      color: inherit;
+      font: inherit;
     }
 
     .site-header {
-      padding: 48px 24px;
+      padding: 50px 24px;
       color: var(--white);
       text-align: center;
       background:
@@ -92,8 +97,11 @@
     }
 
     .header-button {
-      display: inline-block;
-      padding: 12px 18px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 11px 18px;
       border: 1px solid rgba(255, 255, 255, 0.75);
       border-radius: 8px;
       background: rgba(255, 255, 255, 0.12);
@@ -110,15 +118,8 @@
       transform: translateY(-1px);
     }
 
-    .header-button:focus-visible,
-    .pdf-button:focus-visible,
-    .text-link:focus-visible {
-      outline: 3px solid #ffd54f;
-      outline-offset: 3px;
-    }
-
     main {
-      width: min(1300px, calc(100% - 32px));
+      width: min(1320px, calc(100% - 32px));
       margin: 32px auto 60px;
     }
 
@@ -137,7 +138,7 @@
     }
 
     .overview-card p {
-      max-width: 1000px;
+      max-width: 1050px;
     }
 
     .overview-card p:last-of-type {
@@ -172,80 +173,226 @@
       font-size: 0.94rem;
     }
 
-    .viewer-section {
+    .reader-section {
       margin-top: 30px;
-      padding: 22px;
       border: 1px solid var(--border);
       border-radius: 14px;
+      overflow: hidden;
       background: var(--white);
       box-shadow: var(--shadow);
     }
 
-    .viewer-toolbar {
+    .reader-header {
+      padding: 22px;
+      border-bottom: 1px solid var(--border);
+      background: var(--white);
+    }
+
+    .reader-heading-row {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
       gap: 16px;
-      margin-bottom: 18px;
     }
 
-    .viewer-toolbar h2 {
+    .reader-heading-row h2 {
       margin: 0;
       color: var(--forest);
       font-size: 1.7rem;
     }
 
-    .viewer-actions {
+    .reader-heading-row p {
+      margin: 4px 0 0;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .document-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
     }
 
-    .pdf-button {
-      display: inline-block;
-      padding: 11px 17px;
+    .action-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 10px 16px;
+      border: 0;
       border-radius: 8px;
       background: var(--teal);
       color: var(--white);
       font-weight: 700;
       text-decoration: none;
+      cursor: pointer;
       transition:
         background-color 0.2s ease,
         transform 0.2s ease;
     }
 
-    .pdf-button:hover {
+    .action-link:hover {
       background: var(--teal-dark);
       transform: translateY(-1px);
     }
 
-    .pdf-button.secondary {
+    .action-link.secondary {
       background: var(--water);
     }
 
-    .pdf-button.secondary:hover {
-      background: #245f98;
+    .action-link.secondary:hover {
+      background: var(--water-dark);
     }
 
-    .pdf-reader {
-      display: block;
-      width: 100%;
-      height: 88vh;
-      min-height: 800px;
+    .reader-toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px 22px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.97);
+      box-shadow: 0 3px 12px rgba(28, 67, 51, 0.08);
+      backdrop-filter: blur(8px);
+    }
+
+    .toolbar-group {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .toolbar-button {
+      min-width: 42px;
+      min-height: 40px;
+      padding: 8px 12px;
       border: 1px solid var(--border);
-      border-radius: 9px;
-      background: #e9eeeb;
+      border-radius: 7px;
+      background: var(--white);
+      color: var(--text);
+      font-weight: 700;
+      cursor: pointer;
+      transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease;
     }
 
-    .viewer-note {
-      margin: 15px 0 0;
+    .toolbar-button:hover:not(:disabled) {
+      border-color: var(--teal);
+      background: #edf7f4;
+    }
+
+    .toolbar-button:disabled {
+      cursor: not-allowed;
+      opacity: 0.45;
+    }
+
+    .zoom-display,
+    .page-display {
+      min-width: 84px;
       color: var(--muted);
-      font-size: 0.94rem;
+      font-size: 0.92rem;
+      font-weight: 700;
       text-align: center;
     }
 
-    .text-link {
+    .reader-status {
+      padding: 18px 22px;
+      border-bottom: 1px solid var(--border);
+      background: #f8fbf9;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .reader-status.error {
+      color: var(--danger);
+      font-weight: 700;
+    }
+
+    .progress-track {
+      width: min(440px, 90%);
+      height: 8px;
+      margin: 12px auto 0;
+      overflow: hidden;
+      border-radius: 999px;
+      background: #dce7e1;
+    }
+
+    .progress-bar {
+      width: 0%;
+      height: 100%;
+      border-radius: inherit;
+      background:
+        linear-gradient(
+          90deg,
+          var(--teal),
+          var(--water)
+        );
+      transition: width 0.2s ease;
+    }
+
+    .pdf-scroll-container {
+      height: 86vh;
+      min-height: 760px;
+      padding: 28px 18px 50px;
+      overflow: auto;
+      background: var(--reader-background);
+      overscroll-behavior: contain;
+      scroll-behavior: smooth;
+    }
+
+    .pdf-pages {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 26px;
+      width: max-content;
+      min-width: 100%;
+      margin: 0 auto;
+    }
+
+    .pdf-page {
+      position: relative;
+      flex: 0 0 auto;
+      overflow: hidden;
+      border-radius: 3px;
+      background: var(--white);
+      box-shadow: var(--page-shadow);
+    }
+
+    .pdf-page canvas {
+      display: block;
+      width: 100%;
+      height: auto;
+      background: var(--white);
+    }
+
+    .page-number {
+      padding: 7px 10px;
+      border-top: 1px solid #e5e7eb;
+      background: var(--white);
+      color: var(--muted);
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .reader-footer-note {
+      padding: 15px 22px;
+      border-top: 1px solid var(--border);
+      background: var(--white);
+      color: var(--muted);
+      font-size: 0.92rem;
+      text-align: center;
+    }
+
+    .reader-footer-note a {
       color: var(--teal);
       font-weight: 700;
     }
@@ -266,6 +413,15 @@
       text-decoration: underline;
     }
 
+    .header-button:focus-visible,
+    .action-link:focus-visible,
+    .toolbar-button:focus-visible,
+    .site-footer a:focus-visible,
+    .reader-footer-note a:focus-visible {
+      outline: 3px solid #f4c542;
+      outline-offset: 3px;
+    }
+
     @media (max-width: 760px) {
       .site-header {
         padding: 40px 18px;
@@ -276,32 +432,87 @@
         margin-top: 20px;
       }
 
-      .overview-card,
-      .viewer-section {
-        padding: 18px;
+      .overview-card {
+        padding: 20px;
       }
 
       .metrics {
         grid-template-columns: 1fr;
       }
 
-      .viewer-toolbar {
+      .reader-header {
+        padding: 18px;
+      }
+
+      .reader-heading-row {
         align-items: flex-start;
         flex-direction: column;
       }
 
-      .viewer-actions {
+      .document-actions {
         width: 100%;
       }
 
-      .pdf-button {
+      .action-link {
         flex: 1;
         text-align: center;
       }
 
-      .pdf-reader {
+      .reader-toolbar {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 10px 14px;
+      }
+
+      .toolbar-group {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .pdf-scroll-container {
         height: 78vh;
-        min-height: 600px;
+        min-height: 580px;
+        padding: 16px 8px 36px;
+      }
+
+      .pdf-pages {
+        gap: 18px;
+      }
+    }
+
+    @media print {
+      .site-header,
+      .overview-card,
+      .reader-header,
+      .reader-toolbar,
+      .reader-status,
+      .reader-footer-note,
+      .site-footer {
+        display: none;
+      }
+
+      body,
+      main,
+      .reader-section,
+      .pdf-scroll-container {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        overflow: visible;
+        border: 0;
+        background: var(--white);
+        box-shadow: none;
+      }
+
+      .pdf-page {
+        margin: 0;
+        break-after: page;
+        box-shadow: none;
+      }
+
+      .page-number {
+        display: none;
       }
     }
   </style>
@@ -389,39 +600,146 @@
     </section>
 
     <section
-      class="viewer-section"
+      class="reader-section"
       aria-labelledby="pdf-reader-heading"
     >
-      <div class="viewer-toolbar">
-        <h2 id="pdf-reader-heading">Read the Complete Fact Sheet</h2>
+      <div class="reader-header">
+        <div class="reader-heading-row">
+          <div>
+            <h2 id="pdf-reader-heading">
+              Read the Complete Fact Sheet
+            </h2>
 
-        <div class="viewer-actions">
-          ./documents/TacomaTideflatsLandfill_FactSheet_POT_1.pdf
-            Open PDF in New Tab
-          </a>
+            <p>
+              Scroll continuously through every page of the document.
+            </p>
+          </div>
 
-          ./documents/TacomaTideflatsLandfill_FactSheet_POT_1.pdf
-            Download PDF
-          </a>
+          <div class="document-actions">
+            ./documents/TacomaTideflatsLandfill_FactSheet_POT_1.pdf
+              Open Original PDF
+            </a>
+
+            ./documents/TacomaTideflatsLandfill_FactSheet_POT_1.pdf
+              Download PDF
+            </a>
+          </div>
         </div>
       </div>
 
-      ./documents/TacomaTideflatsLandfill_FactSheet_POT_1.pdf#view=FitH
-        <p>
-          Your browser cannot display the embedded PDF.
-          ./documents/TacomaTideflatsLandfill_FactSheet_POT_1.pdf
-            Open the complete fact sheet.
-          </a>
-        </p>
-      </iframe>
+      <div
+        class="reader-toolbar"
+        role="toolbar"
+        aria-label="PDF reader controls"
+      >
+        <div class="toolbar-group">
+          <button
+            id="previousPageButton"
+            class="toolbar-button"
+            type="button"
+            aria-label="Go to previous page"
+            disabled
+          >
+            Previous
+          </button>
 
-      <p class="viewer-note">
-        Scroll inside the reader to view all 20 pages. If the reader does not
-        load on your device,
+          <span
+            id="pageDisplay"
+            class="page-display"
+            aria-live="polite"
+          >
+            Page 1
+          </span>
+
+          <button
+            id="nextPageButton"
+            class="toolbar-button"
+            type="button"
+            aria-label="Go to next page"
+            disabled
+          >
+            Next
+          </button>
+        </div>
+
+        <div class="toolbar-group">
+          <button
+            id="zoomOutButton"
+            class="toolbar-button"
+            type="button"
+            aria-label="Zoom out"
+            disabled
+          >
+            −
+          </button>
+
+          <span
+            id="zoomDisplay"
+            class="zoom-display"
+            aria-live="polite"
+          >
+            Fit width
+          </span>
+
+          <button
+            id="zoomInButton"
+            class="toolbar-button"
+            type="button"
+            aria-label="Zoom in"
+            disabled
+          >
+            +
+          </button>
+
+          <button
+            id="fitWidthButton"
+            class="toolbar-button"
+            type="button"
+            disabled
+          >
+            Fit width
+          </button>
+        </div>
+      </div>
+
+      <div
+        id="readerStatus"
+        class="reader-status"
+        role="status"
+        aria-live="polite"
+      >
+        Loading the fact sheet...
+
+        <div
+          class="progress-track"
+          aria-hidden="true"
+        >
+          <div
+            id="progressBar"
+            class="progress-bar"
+          ></div>
+        </div>
+      </div>
+
+      <div
+        id="pdfScrollContainer"
+        class="pdf-scroll-container"
+        tabindex="0"
+        aria-label="Scrollable Tacoma Tideflats project fact sheet"
+      >
+        <div
+          id="pdfPages"
+          class="pdf-pages"
+        ></div>
+      </div>
+
+      <div class="reader-footer-note">
+        Scroll inside the document reader to view all pages. If the reader
+        does not load,
         ./documents/TacomaTideflatsLandfill_FactSheet_POT_1.pdf
-          open the PDF directly
+          open the original PDF
         </a>.
-      </p>
+      </div>
     </section>
   </main>
 
@@ -443,5 +761,445 @@
       LinkedIn
     </a>
   </footer>
+
+  <script type="module">
+    import * as pdfjsLib from
+      "https://cdn.jsdelivr.net/npm/pdfjs-dist@4.10.38/build/pdf.min.mjs";
+
+    pdfjsLib.GlobalWorkerOptions.workerSrc =
+      "https://cdn.jsdelivr.net/npm/pdfjs-dist@4.10.38/build/pdf.worker.min.mjs";
+
+    const pdfUrl =
+      "./documents/TacomaTideflatsLandfill_FactSheet_POT_1.pdf";
+
+    const pagesContainer =
+      document.getElementById("pdfPages");
+
+    const scrollContainer =
+      document.getElementById("pdfScrollContainer");
+
+    const readerStatus =
+      document.getElementById("readerStatus");
+
+    const progressBar =
+      document.getElementById("progressBar");
+
+    const pageDisplay =
+      document.getElementById("pageDisplay");
+
+    const zoomDisplay =
+      document.getElementById("zoomDisplay");
+
+    const previousPageButton =
+      document.getElementById("previousPageButton");
+
+    const nextPageButton =
+      document.getElementById("nextPageButton");
+
+    const zoomOutButton =
+      document.getElementById("zoomOutButton");
+
+    const zoomInButton =
+      document.getElementById("zoomInButton");
+
+    const fitWidthButton =
+      document.getElementById("fitWidthButton");
+
+    let pdfDocument = null;
+    let zoomMultiplier = 1;
+    let currentPage = 1;
+    let rendering = false;
+    let resizeTimer = null;
+
+    const minimumZoom = 0.6;
+    const maximumZoom = 2.0;
+    const zoomStep = 0.15;
+
+    function enableControls() {
+      previousPageButton.disabled = false;
+      nextPageButton.disabled = false;
+      zoomOutButton.disabled = false;
+      zoomInButton.disabled = false;
+      fitWidthButton.disabled = false;
+    }
+
+    function updateControls() {
+      if (!pdfDocument) {
+        return;
+      }
+
+      previousPageButton.disabled = currentPage <= 1;
+      nextPageButton.disabled =
+        currentPage >= pdfDocument.numPages;
+
+      zoomOutButton.disabled =
+        zoomMultiplier <= minimumZoom;
+
+      zoomInButton.disabled =
+        zoomMultiplier >= maximumZoom;
+
+      pageDisplay.textContent =
+        `Page ${currentPage} of ${pdfDocument.numPages}`;
+
+      if (Math.abs(zoomMultiplier - 1) < 0.01) {
+        zoomDisplay.textContent = "Fit width";
+      } else {
+        zoomDisplay.textContent =
+          `${Math.round(zoomMultiplier * 100)}%`;
+      }
+    }
+
+    function getAvailableWidth() {
+      const horizontalPadding = 36;
+
+      return Math.max(
+        280,
+        scrollContainer.clientWidth - horizontalPadding
+      );
+    }
+
+    async function renderPdf() {
+      if (!pdfDocument || rendering) {
+        return;
+      }
+
+      rendering = true;
+      pagesContainer.innerHTML = "";
+
+      readerStatus.classList.remove("error");
+      readerStatus.hidden = false;
+      readerStatus.innerHTML = `
+        Rendering the fact sheet...
+        <div class="progress-track" aria-hidden="true">
+          <div id="progressBar" class="progress-bar"></div>
+        </div>
+      `;
+
+      const activeProgressBar =
+        document.getElementById("progressBar");
+
+      const availableWidth = getAvailableWidth();
+
+      try {
+        for (
+          let pageNumber = 1;
+          pageNumber <= pdfDocument.numPages;
+          pageNumber += 1
+        ) {
+          const page =
+            await pdfDocument.getPage(pageNumber);
+
+          const unscaledViewport =
+            page.getViewport({ scale: 1 });
+
+          const fitWidthScale =
+            availableWidth / unscaledViewport.width;
+
+          const renderScale =
+            fitWidthScale * zoomMultiplier;
+
+          const viewport =
+            page.getViewport({ scale: renderScale });
+
+          const pageWrapper =
+            document.createElement("article");
+
+          pageWrapper.className = "pdf-page";
+          pageWrapper.dataset.pageNumber =
+            String(pageNumber);
+
+          pageWrapper.setAttribute(
+            "aria-label",
+            `Page ${pageNumber} of ${pdfDocument.numPages}`
+          );
+
+          pageWrapper.style.width =
+            `${Math.floor(viewport.width)}px`;
+
+          const canvas =
+            document.createElement("canvas");
+
+          const context =
+            canvas.getContext("2d", {
+              alpha: false
+            });
+
+          const outputScale =
+            Math.min(window.devicePixelRatio || 1, 2);
+
+          canvas.width =
+            Math.floor(viewport.width * outputScale);
+
+          canvas.height =
+            Math.floor(viewport.height * outputScale);
+
+          canvas.style.width =
+            `${Math.floor(viewport.width)}px`;
+
+          canvas.style.height =
+            `${Math.floor(viewport.height)}px`;
+
+          const transform =
+            outputScale === 1
+              ? null
+              : [
+                  outputScale,
+                  0,
+                  0,
+                  outputScale,
+                  0,
+                  0
+                ];
+
+          await page.render({
+            canvasContext: context,
+            viewport,
+            transform
+          }).promise;
+
+          const pageNumberLabel =
+            document.createElement("div");
+
+          pageNumberLabel.className = "page-number";
+          pageNumberLabel.textContent =
+            `Page ${pageNumber} of ${pdfDocument.numPages}`;
+
+          pageWrapper.appendChild(canvas);
+          pageWrapper.appendChild(pageNumberLabel);
+          pagesContainer.appendChild(pageWrapper);
+
+          const progress =
+            (pageNumber / pdfDocument.numPages) * 100;
+
+          activeProgressBar.style.width =
+            `${progress}%`;
+
+          readerStatus.firstChild.textContent =
+            `Rendering page ${pageNumber} of ${pdfDocument.numPages}...`;
+        }
+
+        readerStatus.hidden = true;
+        enableControls();
+        updateCurrentPage();
+      } catch (error) {
+        console.error(error);
+
+        readerStatus.hidden = false;
+        readerStatus.classList.add("error");
+
+        readerStatus.innerHTML = `
+          The PDF reader could not render the document.
+          ${pdfUrl}
+            Open the original PDF instead.
+          </a>
+        `;
+      } finally {
+        rendering = false;
+        updateControls();
+      }
+    }
+
+    function updateCurrentPage() {
+      if (!pdfDocument) {
+        return;
+      }
+
+      const pages =
+        [...document.querySelectorAll(".pdf-page")];
+
+      if (pages.length === 0) {
+        return;
+      }
+
+      const containerRect =
+        scrollContainer.getBoundingClientRect();
+
+      const referencePosition =
+        containerRect.top + containerRect.height * 0.35;
+
+      let closestPage = pages[0];
+      let closestDistance = Number.POSITIVE_INFINITY;
+
+      for (const page of pages) {
+        const pageRect = page.getBoundingClientRect();
+
+        const distance =
+          Math.abs(pageRect.top - referencePosition);
+
+        if (distance < closestDistance) {
+          closestDistance = distance;
+          closestPage = page;
+        }
+      }
+
+      currentPage =
+        Number(closestPage.dataset.pageNumber);
+
+      updateControls();
+    }
+
+    function scrollToPage(pageNumber) {
+      const targetPage =
+        document.querySelector(
+          `[data-page-number="${pageNumber}"]`
+        );
+
+      if (!targetPage) {
+        return;
+      }
+
+      targetPage.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+
+      currentPage = pageNumber;
+      updateControls();
+    }
+
+    async function changeZoom(change) {
+      if (rendering) {
+        return;
+      }
+
+      zoomMultiplier =
+        Math.min(
+          maximumZoom,
+          Math.max(
+            minimumZoom,
+            zoomMultiplier + change
+          )
+        );
+
+      await renderPdf();
+      scrollToPage(currentPage);
+    }
+
+    previousPageButton.addEventListener(
+      "click",
+      () => {
+        scrollToPage(
+          Math.max(1, currentPage - 1)
+        );
+      }
+    );
+
+    nextPageButton.addEventListener(
+      "click",
+      () => {
+        if (!pdfDocument) {
+          return;
+        }
+
+        scrollToPage(
+          Math.min(
+            pdfDocument.numPages,
+            currentPage + 1
+          )
+        );
+      }
+    );
+
+    zoomOutButton.addEventListener(
+      "click",
+      () => changeZoom(-zoomStep)
+    );
+
+    zoomInButton.addEventListener(
+      "click",
+      () => changeZoom(zoomStep)
+    );
+
+    fitWidthButton.addEventListener(
+      "click",
+      async () => {
+        if (rendering) {
+          return;
+        }
+
+        zoomMultiplier = 1;
+        await renderPdf();
+        scrollToPage(currentPage);
+      }
+    );
+
+    scrollContainer.addEventListener(
+      "scroll",
+      updateCurrentPage,
+      { passive: true }
+    );
+
+    window.addEventListener(
+      "resize",
+      () => {
+        clearTimeout(resizeTimer);
+
+        resizeTimer = setTimeout(
+          async () => {
+            if (!pdfDocument || rendering) {
+              return;
+            }
+
+            const rememberedPage = currentPage;
+
+            await renderPdf();
+            scrollToPage(rememberedPage);
+          },
+          350
+        );
+      }
+    );
+
+    async function initializeReader() {
+      try {
+        const loadingTask =
+          pdfjsLib.getDocument(pdfUrl);
+
+        loadingTask.onProgress =
+          ({ loaded, total }) => {
+            if (!total) {
+              return;
+            }
+
+            const percent =
+              Math.round((loaded / total) * 100);
+
+            const initialProgressBar =
+              document.getElementById("progressBar");
+
+            if (initialProgressBar) {
+              initialProgressBar.style.width =
+                `${percent}%`;
+            }
+
+            readerStatus.firstChild.textContent =
+              `Loading the fact sheet: ${percent}%...`;
+          };
+
+        pdfDocument =
+          await loadingTask.promise;
+
+        pageDisplay.textContent =
+          `Page 1 of ${pdfDocument.numPages}`;
+
+        await renderPdf();
+      } catch (error) {
+        console.error(error);
+
+        readerStatus.classList.add("error");
+
+        readerStatus.innerHTML = `
+          The fact sheet could not be loaded. Verify that the PDF exists at
+          <strong>${pdfUrl}</strong>.
+          <br>
+          ${pdfUrl}
+            Try opening the PDF directly.
+          </a>
+        `;
+      }
+    }
+
+    initializeReader();
+  </script>
 </body>
 </html>
