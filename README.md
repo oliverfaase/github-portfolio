@@ -246,11 +246,9 @@ I developed an ArcGIS Experience Builder application supporting long-term shorel
 
 ### Project Media
 
-<div align="center">
 
-<img src="https://github.com/user-attachments/assets/52ce3565-4f6b-4721-a516-202b5a457347" alt="Shoreline OIC 2026 Experience Builder application" width="850">
+https://github.com/user-attachments/assets/f150c141-529b-4cb0-be04-7f30ffeb5613
 
-<p><em>Portfolio preview of the Shoreline OIC 2026 Experience Builder application.</em></p>
 
 </div>
 
