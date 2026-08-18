@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
 
@@ -107,6 +108,13 @@
       transform: translateY(-1px);
     }
 
+    .header-button:focus-visible,
+    .pdf-button:focus-visible,
+    footer a:focus-visible {
+      outline: 3px solid #ffffff;
+      outline-offset: 3px;
+    }
+
     main {
       width: min(1240px, calc(100% - 32px));
       margin: 34px auto 60px;
@@ -202,6 +210,10 @@
       transform: translateY(-1px);
     }
 
+    .pdf-button:focus-visible {
+      outline-color: var(--teal);
+    }
+
     .pdf-viewer {
       display: block;
       width: 100%;
@@ -239,6 +251,10 @@
     footer a:hover,
     footer a:focus {
       text-decoration: underline;
+    }
+
+    footer a:focus-visible {
+      outline-color: var(--teal);
     }
 
     @media (max-width: 760px) {
@@ -284,15 +300,20 @@
       communication.
     </p>
 
-    <div class="header-buttons">
+    <nav class="header-buttons" aria-label="Project navigation">
 
-      https://github.com/oliverfaase/github-portfolio
+      <a
+        class="header-button"
+        href="https://github.com/oliverfaase/github-portfolio"
+      >
         Return to Portfolio Repository
       </a>
 
       <a
         class="header-button"
         href="https://github.com/oliverfaase/github-portfolio/releases/tag/TacomaTideflats"
+        target="_blank"
+        rel="noopener noreferrer"
       >
         Download ArcGIS Pro Project
       </a>
@@ -304,18 +325,19 @@
         Contact Oliver
       </a>
 
-    </div>
+    </nav>
   </header>
 
   <main>
 
-    <section class="card">
-      <h2>Project Fact Sheet</h2>
+    <section class="card" aria-labelledby="project-overview-heading">
+
+      <h2 id="project-overview-heading">Project Fact Sheet</h2>
 
       <p>
         This fact sheet documents the interpreted former landfill footprint,
         Port parcels, measured subsurface cross sections, environmental
-        investigation records, contaminant screening, habitat areas, and
+        investigation records, contaminant screening, habitat areas, and the
         methane-monitoring network.
       </p>
 
@@ -352,11 +374,16 @@
       </div>
     </section>
 
-    <section class="viewer-section">
+    <section
+      class="viewer-section"
+      aria-labelledby="pdf-viewer-heading"
+    >
 
       <div class="viewer-heading">
 
-        <h2>Read the Complete Fact Sheet</h2>
+        <h2 id="pdf-viewer-heading">
+          Read the Complete Fact Sheet
+        </h2>
 
         ./documents/TacomaTideflatsLandfill_FactSheet_POT_1.pdf
           Open PDF in New Tab
@@ -364,9 +391,9 @@
 
       </div>
 
-      ./documents/TacomaTideflatsLandfill_FactSheet_POT_1.pdf
+      ./documents/TacomaTideflatsLandfill_FactSheet_POT_1.pdf#view=FitH
         <p>
-          The browser cannot display the embedded PDF.
+          Your browser cannot display the embedded PDF.
           ./documents/TacomaTideflatsLandfill_FactSheet_POT_1.pdf
             Open the complete fact sheet.
           </a>
@@ -388,10 +415,13 @@
   <footer>
     Oliver Faase • GIS • Environmental Planning • Geospatial Automation
     <br>
+
     <a href="mailto:faaseoliver@gmail.com">
       faaseoliver@gmail.com
     </a>
+
     •
+
     <a
       href="https://www.linkedin.com/in/oliverfaase/"
       target="_blank"
@@ -402,4 +432,5 @@
   </footer>
 
 </body>
+
 </html>
