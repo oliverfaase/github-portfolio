@@ -1,0 +1,65 @@
+# NOTE: Extracted and normalized from Landfill Master Document.docx.
+# Archive status: final available version. Review configuration before execution.
+# Public-safe copy: internal emails, user paths, and organization-specific locations were removed.
+
+import arcpy
+import os
+
+# CHANGE THESE
+in_fc = r"C:\path\to\your.gdb\YourPoints"
+depth_field = "YourDepthField"
+step = 3.0
+
+arcpy.env.overwriteOutput = True
+
+# Use the CURRENT project's default geodatabase
+aprx = arcpy.mp.ArcGISProject("CURRENT")
+workspace = aprx.defaultGeodatabase
+
+desc = arcpy.Describe(in_fc)
+sr = desc.spatialReference
+oid_field = desc.OIDFieldName
+
+out_name = "rings_output_final"
+out_fc = os.path.join(workspace, out_name)
+
+print("Output will go to:", out_fc)
+
+if arcpy.Exists(out_fc):
+    arcpy.management.Delete(out_fc)
+
+arcpy.management.CreateFeatureclass(
+    workspace,
+    out_name,
+    "POLYGON",
+    spatial_reference=sr
+)
+
+arcpy.management.AddField(out_fc, "SourceID", "LONG")
+arcpy.management.AddField(out_fc, "RingDist", "DOUBLE")
+arcpy.management.AddField(out_fc, "DepthVal", "DOUBLE")
+
+with arcpy.da.SearchCursor(in_fc, ["SHAPE@", oid_field, depth_field]) as s_cur, \
+     arcpy.da.InsertCursor(out_fc, ["SHAPE@", "SourceID", "RingDist", "DepthVal"]) as i_cur:
+
+    for geom, oid, depth in s_cur:
+        if depth is None:
+            continue
+
+        depth_num = float(depth)
+
+        if depth_num < step:
+            continue
+
+        num_rings = int(depth_num // step)
+
+        for i in range(1, num_rings + 1):
+            dist = i * step
+            ring_geom = geom.buffer(dist)
+            i_cur.insertRow([ring_geom, oid, dist, depth_num])
+
+print("Done")
+print("Output count:", arcpy.management.GetCount(out_fc)[0])
+
+# Add to the active map
+aprx.activeMap.addDataFromPath(out_fc)
