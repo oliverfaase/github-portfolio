@@ -10,55 +10,94 @@
 
   <meta
     name="description"
-    content="Oliver Faase's environmental GIS portfolio featuring ArcPy automation, environmental planning, drone mapping, coastal GIS, and spatial storytelling."
+    content="Oliver Faase is an environmental GIS professional specializing in geospatial automation, drone mapping, shoreline monitoring, coastal analysis, spatial databases, and public-facing GIS applications."
   >
 
-  <title>Oliver Faase | Environmental GIS Portfolio</title>
+  <meta
+    name="keywords"
+    content="Oliver Faase, GIS portfolio, environmental GIS, ArcGIS Pro, Python, ArcPy, drone mapping, shoreline monitoring, coastal GIS, geospatial automation"
+  >
+
+  <meta name="author" content="Oliver Faase">
+
+  <meta property="og:title" content="Oliver Faase | Environmental GIS">
+  <meta
+    property="og:description"
+    content="Environmental GIS, geospatial automation, drone mapping, coastal analysis, and spatial storytelling."
+  >
+  <meta property="og:type" content="website">
+  <meta
+    property="og:url"
+    content="https://oliverfaase.github.io/github-portfolio/"
+  >
+
+  <!-- Replace this path when you have selected a social preview image. -->
+  <meta
+    property="og:image"
+    content="https://oliverfaase.github.io/github-portfolio/assets/images/social-preview.jpg"
+  >
+
+  <title>Oliver Faase | Environmental GIS & Geospatial Automation</title>
 
   assets/css/style.css
+
+  assets/js/main.jsscript>
 </head>
 
 <body>
-  <header class="site-header">
-    <div class="container navigation">
 
-      <a class="site-name" href="index.html">
-        Oliver Faase
+  <!-- Accessibility skip link -->
+  #main-contentSkip to main content</a>
+
+  <!-- =========================================================
+       SITE HEADER
+       ========================================================= -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+
+      index.html
+        <span class="site-logo-mark" aria-hidden="true">OF</span>
+
+        <span class="site-logo-text">
+          <strong>Oliver Faase</strong>
+          <small>Environmental GIS</small>
+        </span>
       </a>
 
       <button
-        class="menu-button"
+        class="menu-toggle"
         type="button"
-        aria-label="Open navigation menu"
         aria-expanded="false"
+        aria-controls="primary-navigation"
+        aria-label="Open navigation menu"
       >
-        Menu
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
 
-      <nav aria-label="Primary navigation">
-        <ul class="nav-links">
+      <nav
+        class="primary-navigation"
+        id="primary-navigation"
+        aria-label="Primary navigation"
+      >
+        <ul>
           <li>
-            <a href="index.html" aria-current="page">
+            index.html
               Home
             </a>
           </li>
 
           <li>
-            <a href="portfolio.html">
-              Portfolio
-            </a>
+            portfolio.htmlPortfolio</a>
           </li>
 
           <li>
-            <a href="about.html">
-              About
-            </a>
+            about.htmlAbout</a>
           </li>
 
           <li>
-            <a href="resume.html">
-              Résumé
-            </a>
+            resume.htmlRésumé</a>
           </li>
 
           <li>
@@ -68,6 +107,7 @@
               rel="noopener noreferrer"
             >
               GitHub
+              <span class="external-link-icon" aria-hidden="true">↗</span>
             </a>
           </li>
         </ul>
@@ -76,243 +116,457 @@
     </div>
   </header>
 
-  <main>
 
+  <main id="main-content">
+
+    <!-- =========================================================
+         HERO
+         Replace the background image in your CSS with one of your
+         strongest Tacoma, shoreline, drone, or bathymetric images.
+         ========================================================= -->
     <section class="hero">
+
+      <div class="hero-background" aria-hidden="true">
+        <div class="hero-overlay"></div>
+      </div>
+
       <div class="container hero-content">
 
         <p class="eyebrow">
-          Environmental GIS • Geospatial Automation
+          Environmental GIS · Geospatial Automation
         </p>
 
         <h1>Oliver Faase</h1>
 
-        <h2>
-          I transform complex environmental information into reproducible GIS
-          workflows, interactive applications, and decision-ready
-          visualizations.
-        </h2>
-
-        <p>
-          My work combines environmental planning, ArcGIS Pro, Python,
-          ArcPy, drone mapping, coastal analysis, spatial databases, and
-          public-facing GIS communication.
+        <p class="hero-subtitle">
+          Building geospatial systems for environmental planning,
+          shoreline monitoring, spatial analysis, and decision support.
         </p>
 
-        <div class="button-row">
-          <a class="button" href="portfolio.html">
-            View Portfolio
+        <p class="hero-description">
+          I combine ArcGIS Pro, Python, ArcPy, drone imagery, spatial
+          databases, and interactive mapping to transform complex
+          environmental information into traceable and actionable tools.
+        </p>
+
+        <div class="hero-actions">
+          #featured-projects
+            Explore My Work
           </a>
 
-          <a class="button light" href="about.html">
-            About Me
-          </a>
-
-          <a class="button light" href="resume.html">
+          resume.html
             View Résumé
           </a>
         </div>
 
+        <ul class="hero-links" aria-label="Contact and professional links">
+          <li>
+            <a href="mailto:faaseoliver@gmail.com">
+              Email
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="https://www.linkedin.com/in/oliverfaase/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </a>
+          </li>
+
+          <li>
+            https://github.com/oliverfaase
+              GitHub
+            </a>
+          </li>
+        </ul>
+
       </div>
+
+      #featured-projects
+        <span>Selected work</span>
+        <span aria-hidden="true">↓</span>
+      </a>
+
     </section>
 
-    <section class="section white">
-      <div class="container">
+
+    <!-- =========================================================
+         INTRODUCTION
+         ========================================================= -->
+    <section class="section introduction-section">
+      <div class="container introduction-grid">
 
         <div class="section-heading">
-          <p class="eyebrow" style="color: #00796b;">
-            Featured Work
-          </p>
+          <p class="eyebrow">What I Do</p>
 
-          <h2>Environmental GIS projects</h2>
+          <h2>
+            Environmental information made spatial, traceable,
+            and decision-ready.
+          </h2>
+        </div>
+
+        <div class="introduction-copy">
+          <p class="lead">
+            I am an environmental GIS professional focused on
+            environmental data management, geospatial automation,
+            coastal monitoring, and public-facing spatial communication.
+          </p>
 
           <p>
-            Selected work in environmental data management, geospatial
-            automation, drone monitoring, coastal analysis, and interactive
-            GIS communication.
+            My work connects historical records, field observations,
+            drone imagery, environmental sampling information, and
+            spatial databases. I use these resources to build repeatable
+            GIS workflows and visual products for technical and
+            nontechnical audiences.
           </p>
-        </div>
 
-        <div class="project-grid">
-
-          <article class="project-card">
-
-            <div class="project-card-placeholder">
-              <span>GIS</span>
-
-              <strong>
-                Tacoma Tideflats Closed Landfill
-              </strong>
-            </div>
-
-            <div class="project-card-content">
-              <h3>Tacoma Tideflats Closed Landfill GIS</h3>
-
-              <p>
-                Environmental database development and automated subsurface
-                cross sections for 336 investigation locations.
-              </p>
-
-              <div class="tags">
-                <span class="tag">ArcGIS Pro</span>
-                <span class="tag">Python</span>
-                <span class="tag">ArcPy</span>
-                <span class="tag">QA/QC</span>
-              </div>
-
-              projects/tacoma-tideflats.html
-                View Project
-              </a>
-            </div>
-
-          </article>
-
-          <article class="project-card">
-
-            <video
-              controls
-              muted
-              playsinline
-              preload="metadata"
-              aria-label="Habitat assessment StoryMap preview"
-            >
-              <source
-                src="https://github.com/user-attachments/assets/10c80feb-7134-409c-aa90-2a8086c44c49"
-              >
-
-              Your browser does not support embedded video.
-            </video>
-
-            <div class="project-card-content">
-              <h3>Interactive Habitat Assessment StoryMap</h3>
-
-              <p>
-                Habitat mapping, drone imagery, restoration documentation,
-                and environmental storytelling.
-              </p>
-
-              <div class="tags">
-                <span class="tag">StoryMaps</span>
-                <span class="tag">Drone Imagery</span>
-                <span class="tag">Habitat</span>
-              </div>
-
-              projects/habitat-storymap.html
-                View Project
-              </a>
-            </div>
-
-          </article>
-
-          <article class="project-card">
-
-            <img
-              src="https://github.com/user-attachments/assets/52ce3565-4f6b-4721-a516-202b5a457347"
-              alt="Shoreline OIC Experience Builder application preview"
-              loading="lazy"
-            >
-
-            <div class="project-card-content">
-              <h3>Shoreline OIC Experience Builder</h3>
-
-              <p>
-                Repeatable drone monitoring, oriented imagery, temporal
-                comparison, and shoreline-change assessment.
-              </p>
-
-              <div class="tags">
-                <span class="tag">Experience Builder</span>
-                <span class="tag">Drone Monitoring</span>
-                <span class="tag">GeoAI</span>
-              </div>
-
-              projects/shoreline-monitoring.html
-                View Project
-              </a>
-            </div>
-
-          </article>
-
-          <article class="project-card">
-
-            <img
-              src="https://github.com/user-attachments/assets/86672c1a-431e-477c-8235-b6744dfeac63"
-              alt="Port of Tacoma bathymetric surface visualization"
-              loading="lazy"
-            >
-
-            <div class="project-card-content">
-              <h3>Bathymetric Surface Development</h3>
-
-              <p>
-                Hydrographic data processing, TIN-to-raster conversion,
-                terrain modeling, and coastal GIS.
-              </p>
-
-              <div class="tags">
-                <span class="tag">Bathymetry</span>
-                <span class="tag">Terrain Modeling</span>
-                <span class="tag">Coastal GIS</span>
-              </div>
-
-              projects/bathymetric-surfaces.html
-                View Project
-              </a>
-            </div>
-
-          </article>
-
-        </div>
-
-        <div class="button-row">
-          <a class="button" href="portfolio.html">
-            View All Projects
+          about.html
+            More about my background
+            <span aria-hidden="true">→</span>
           </a>
         </div>
 
       </div>
     </section>
 
-    <section class="section">
+
+    <!-- =========================================================
+         FEATURED PROJECTS
+         Image paths below are suggested filenames. Rename the paths
+         to match the images in your repository.
+         ========================================================= -->
+    <section
+      class="section featured-projects-section"
+      id="featured-projects"
+    >
       <div class="container">
 
-        <div class="section-heading">
-          <h2>Technical focus</h2>
+        <div class="section-header">
+          <div>
+            <p class="eyebrow">Selected Projects</p>
+            <h2>Featured environmental GIS work</h2>
+          </div>
 
           <p>
-            I build systems that preserve source traceability, reduce manual
-            processing, communicate uncertainty, and support technical and
-            nontechnical audiences.
+            Projects in environmental data management, Python and ArcPy
+            automation, drone monitoring, coastal GIS, and interactive
+            spatial communication.
           </p>
         </div>
 
-        <div class="skills-grid">
 
-          <article class="skill-card">
+        <!-- Project 01 -->
+        <article class="project-feature project-feature-primary">
+
+          projects/tacoma-tideflats.html
+            assets/images/projects/tacoma-tideflats-cover.jpg
+
+            <span class="project-number" aria-hidden="true">01</span>
+          </a>
+
+          <div class="project-content">
+            <p class="project-type">
+              Environmental GIS · Python · ArcPy
+            </p>
+
+            <h3>
+              projects/tacoma-tideflats.html
+                Tacoma Tideflats Closed Landfill GIS
+              </a>
+            </h3>
+
+            <p class="project-summary">
+              An integrated environmental GIS database and automated
+              subsurface cross-section workflow created from fragmented
+              historical investigation records.
+            </p>
+
+            <div class="project-metrics" aria-label="Project highlights">
+              <div>
+                <strong>336</strong>
+                <span>Investigation locations</span>
+              </div>
+
+              <div>
+                <strong>5</strong>
+                <span>Automated cross sections</span>
+              </div>
+
+              <div>
+                <strong>2D + 3D</strong>
+                <span>Environmental visualization</span>
+              </div>
+            </div>
+
+            <ul class="tag-list" aria-label="Project technologies">
+              <li>ArcGIS Pro</li>
+              <li>Python</li>
+              <li>ArcPy</li>
+              <li>Environmental Data</li>
+              <li>QA/QC</li>
+            </ul>
+
+            projects/tacoma-tideflats.html
+              View Case Study
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+
+        </article>
+
+
+        <!-- Project grid -->
+        <div class="project-grid">
+
+          <!-- Project 02 -->
+          <article class="project-card">
+
+            projects/shoreline-monitoring.html
+              assets/images/projects/shoreline-monitoring-cover.jpg
+
+              <span class="project-number" aria-hidden="true">02</span>
+            </a>
+
+            <div class="project-card-content">
+              <p class="project-type">
+                Drone Monitoring · Web GIS · GeoAI
+              </p>
+
+              <h3>
+                projects/shoreline-monitoring.html
+                  Shoreline Monitoring Experience Builder
+                </a>
+              </h3>
+
+              <p>
+                A web-based monitoring system that organizes repeatable
+                drone imagery for temporal comparison and environmental
+                review.
+              </p>
+
+              <ul class="tag-list" aria-label="Project technologies">
+                <li>Experience Builder</li>
+                <li>Drone Imagery</li>
+                <li>Oriented Imagery</li>
+                <li>GeoAI</li>
+              </ul>
+
+              projects/shoreline-monitoring.html
+                View project
+                <span aria-hidden="true">→</span>
+              </a>
+            </div>
+
+          </article>
+
+
+          <!-- Project 03 -->
+          <article class="project-card">
+
+            projects/habitat-storymap.html
+              assets/images/projects/habitat-storymap-cover.jpg
+
+              <span class="project-number" aria-hidden="true">03</span>
+            </a>
+
+            <div class="project-card-content">
+              <p class="project-type">
+                Habitat Assessment · StoryMaps
+              </p>
+
+              <h3>
+                projects/habitat-storymap.html
+                  Interactive Habitat Assessment StoryMap
+                </a>
+              </h3>
+
+              <p>
+                An interactive environmental narrative combining habitat
+                locations, restoration information, drone imagery, and
+                flyover video.
+              </p>
+
+              <ul class="tag-list" aria-label="Project technologies">
+                <li>ArcGIS StoryMaps</li>
+                <li>Habitat Assessment</li>
+                <li>Drone Imagery</li>
+                <li>Web Mapping</li>
+              </ul>
+
+              projects/habitat-storymap.html
+                View project
+                <span aria-hidden="true">→</span>
+              </a>
+            </div>
+
+          </article>
+
+
+          <!-- Project 04 -->
+          <article class="project-card">
+
+            projects/bathymetric-surfaces.html
+              assets/images/projects/bathymetric-surfaces-cover.jpg
+
+              <span class="project-number" aria-hidden="true">04</span>
+            </a>
+
+            <div class="project-card-content">
+              <p class="project-type">
+                Bathymetry · Terrain Modeling
+              </p>
+
+              <h3>
+                projects/bathymetric-surfaces.html
+                  Bathymetric Surface Development
+                </a>
+              </h3>
+
+              <p>
+                High-resolution underwater terrain surfaces developed
+                from hydrographic survey data using TIN-to-raster
+                conversion and shoreline constraints.
+              </p>
+
+              <ul class="tag-list" aria-label="Project technologies">
+                <li>ArcGIS Pro</li>
+                <li>Bathymetry</li>
+                <li>TIN to Raster</li>
+                <li>Coastal GIS</li>
+              </ul>
+
+              projects/bathymetric-surfaces.html
+                View project
+                <span aria-hidden="true">→</span>
+              </a>
+            </div>
+
+          </article>
+
+
+          <!-- Project 05 -->
+          <article class="project-card">
+
+            projects/cal-poly-storymap.html
+              assets/images/projects/cal-poly-storymap-cover.jpg
+
+              <span class="project-number" aria-hidden="true">05</span>
+            </a>
+
+            <div class="project-card-content">
+              <p class="project-type">
+                Planning GIS · Database Design
+              </p>
+
+              <h3>
+                projects/cal-poly-storymap.html
+                  Planning GIS Database and StoryMap
+                </a>
+              </h3>
+
+              <p>
+                A searchable spatial database and StoryMap documenting
+                the geographic reach and community impact of planning
+                studio projects.
+              </p>
+
+              <ul class="tag-list" aria-label="Project technologies">
+                <li>Geocoding</li>
+                <li>ArcGIS Online</li>
+                <li>StoryMaps</li>
+                <li>Urban Planning</li>
+              </ul>
+
+              projects/cal-poly-storymap.html
+                View project
+                <span aria-hidden="true">→</span>
+              </a>
+            </div>
+
+          </article>
+
+        </div>
+
+        <div class="section-action">
+          portfolio.html
+            View All Projects
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================
+         SPECIALIZATION / TECHNICAL FOCUS
+         ========================================================= -->
+    <section class="section specialties-section">
+      <div class="container">
+
+        <div class="section-header specialties-heading">
+          <div>
+            <p class="eyebrow">Technical Focus</p>
+            <h2>A specialized environmental GIS toolkit</h2>
+          </div>
+
+          <p>
+            I build systems that preserve source traceability, reduce
+            manual processing, communicate uncertainty, and serve both
+            technical and public audiences.
+          </p>
+        </div>
+
+        <div class="specialties-grid">
+
+          <article class="specialty-card">
+            <span class="specialty-icon" aria-hidden="true">◉</span>
+
             <h3>Environmental GIS</h3>
 
             <p>
-              Spatial databases, historical environmental records, monitoring
-              information, and planning-focused analysis.
+              Spatial databases, historical environmental records,
+              investigation data, monitoring information, site
+              management, and planning-focused analysis.
             </p>
           </article>
 
-          <article class="skill-card">
+          <article class="specialty-card">
+            <span class="specialty-icon" aria-hidden="true">&lt;/&gt;</span>
+
             <h3>Python and ArcPy</h3>
 
             <p>
               Repeatable geoprocessing, field validation, batch mapping,
-              subsurface stationing, and cross-section production.
+              cross-section stationing, automated symbology, and data
+              quality control.
             </p>
           </article>
 
-          <article class="skill-card">
+          <article class="specialty-card">
+            <span class="specialty-icon" aria-hidden="true">⌁</span>
+
             <h3>Drone and Coastal GIS</h3>
 
             <p>
-              Repeatable imagery collection, shoreline monitoring,
-              bathymetric surfaces, temporal comparison, and spatial
-              storytelling.
+              Repeatable aerial surveys, shoreline monitoring,
+              bathymetric surfaces, oriented imagery, temporal
+              comparison, and coastal visualization.
+            </p>
+          </article>
+
+          <article class="specialty-card">
+            <span class="specialty-icon" aria-hidden="true">◎</span>
+
+            <h3>Interactive GIS</h3>
+
+            <p>
+              ArcGIS StoryMaps, Experience Builder applications, web
+              maps, multimedia narratives, and accessible environmental
+              communication.
             </p>
           </article>
 
@@ -321,34 +575,142 @@
       </div>
     </section>
 
-    <section class="section white">
-      <div class="container">
 
-        <div class="section-heading">
-          <h2>Let’s connect</h2>
+    <!-- =========================================================
+         SKILLS BAND
+         ========================================================= -->
+    <section class="skills-band" aria-label="Primary skills">
+      <div class="container">
+        <ul>
+          <li>ArcGIS Pro</li>
+          <li>Python</li>
+          <li>ArcPy</li>
+          <li>SQL</li>
+          <li>Environmental GIS</li>
+          <li>Drone Mapping</li>
+          <li>Coastal Analysis</li>
+          <li>Spatial Databases</li>
+          <li>QA/QC</li>
+        </ul>
+      </div>
+    </section>
+
+
+    <!-- =========================================================
+         APPROACH
+         ========================================================= -->
+    <section class="section approach-section">
+      <div class="container approach-grid">
+
+        <div class="approach-content">
+          <p class="eyebrow">Project Approach</p>
+
+          <h2>
+            From complex records to clear spatial decisions.
+          </h2>
 
           <p>
-            I am interested in environmental GIS, geospatial automation,
-            coastal analysis, drone monitoring, and tools that make
-            environmental information easier to understand.
+            My process begins with understanding the source information
+            and ends with a product designed around how people will
+            review, interpret, and use the results.
+          </p>
+
+          about.html
+            Learn more about my process
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+
+        <ol class="approach-steps">
+          <li>
+            <span>01</span>
+
+            <div>
+              <h3>Organize</h3>
+              <p>
+                Compile source records, imagery, field information, and
+                existing spatial data.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <span>02</span>
+
+            <div>
+              <h3>Validate</h3>
+              <p>
+                Standardize fields, review coordinate systems, document
+                limitations, and complete QA/QC.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <span>03</span>
+
+            <div>
+              <h3>Automate</h3>
+              <p>
+                Use Python, ArcPy, and repeatable GIS processes to reduce
+                manual work and improve consistency.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <span>04</span>
+
+            <div>
+              <h3>Communicate</h3>
+              <p>
+                Deliver maps, applications, analytical visuals, and
+                narratives designed around the intended audience.
+              </p>
+            </div>
+          </li>
+        </ol>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================
+         CONTACT CTA
+         ========================================================= -->
+    <section class="contact-section">
+      <div class="container contact-inner">
+
+        <div>
+          <p class="eyebrow">Let’s Connect</p>
+
+          <h2>
+            Interested in environmental GIS and geospatial problem-solving?
+          </h2>
+
+          <p>
+            I am interested in environmental planning, GIS automation,
+            coastal analysis, drone monitoring, spatial data science,
+            and tools that make environmental information easier to use.
           </p>
         </div>
 
-        <div class="button-row">
+        <div class="contact-actions">
           <a
-            class="button"
+            class="button button-primary"
             href="mailto:faaseoliver@gmail.com"
           >
             Email Me
           </a>
 
           <a
-            class="button blue"
+            class="button button-secondary"
             href="https://www.linkedin.com/in/oliverfaase/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            LinkedIn
+            Connect on LinkedIn
+            <span aria-hidden="true">↗</span>
           </a>
         </div>
 
@@ -357,22 +719,54 @@
 
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-layout">
 
-      <div>
-        <strong>Oliver Faase</strong>
-        <br>
-        Environmental GIS and Geospatial Automation
+  <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+
+      <div class="footer-identity">
+        index.html
+          Oliver Faase
+        </a>
+
+        <p>
+          Environmental GIS and Geospatial Automation
+        </p>
       </div>
 
-      <a href="mailto:faaseoliver@gmail.com">
-        faaseoliver@gmail.com
-      </a>
+      <nav class="footer-navigation" aria-label="Footer navigation">
+        portfolio.htmlPortfolio</a>
+        about.htmlAbout</a>
+        resume.htmlRésumé</a>
+        <a href="mailto:faaseoliver@gmail.com">Email</a>
+
+        <a
+          href="https://www.linkedin.com/in/oliverfaase/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn
+        </a>
+
+        https://github.com/oliverfaase
+          GitHub
+        </a>
+      </nav>
+
+      <div class="footer-meta">
+        <p>
+          © <span id="current-year">2026</span> Oliver Faase
+        </p>
+
+        <p>
+          Built with HTML, CSS, and JavaScript.
+        </p>
+      </div>
 
     </div>
   </footer>
 
-  assets/js/main.jsscript>
 </body>
 </html>
