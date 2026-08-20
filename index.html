@@ -21,7 +21,8 @@
 <body>
   <header class="site-header">
     <div class="container navigation">
-      index.html
+
+      <a class="site-name" href="index.html">
         Oliver Faase
       </a>
 
@@ -37,19 +38,27 @@
       <nav aria-label="Primary navigation">
         <ul class="nav-links">
           <li>
-            index.htmlHome</a>
+            <a href="index.html" aria-current="page">
+              Home
+            </a>
           </li>
 
           <li>
-            portfolio.htmlPortfolio</a>
+            <a href="portfolio.html">
+              Portfolio
+            </a>
           </li>
 
           <li>
-            about.htmlAbout</a>
+            <a href="about.html">
+              About
+            </a>
           </li>
 
           <li>
-            resume.htmlRésumé</a>
+            <a href="resume.html">
+              Résumé
+            </a>
           </li>
 
           <li>
@@ -63,12 +72,15 @@
           </li>
         </ul>
       </nav>
+
     </div>
   </header>
 
   <main>
+
     <section class="hero">
       <div class="container hero-content">
+
         <p class="eyebrow">
           Environmental GIS • Geospatial Automation
         </p>
@@ -88,23 +100,25 @@
         </p>
 
         <div class="button-row">
-          portfolio.html
+          <a class="button" href="portfolio.html">
             View Portfolio
           </a>
 
-          about.html
+          <a class="button light" href="about.html">
             About Me
           </a>
 
-          resume.html
+          <a class="button light" href="resume.html">
             View Résumé
           </a>
         </div>
+
       </div>
     </section>
 
     <section class="section white">
       <div class="container">
+
         <div class="section-heading">
           <p class="eyebrow" style="color: #00796b;">
             Featured Work
@@ -120,8 +134,16 @@
         </div>
 
         <div class="project-grid">
+
           <article class="project-card">
-            assets/images/landfill-cover.jpg
+
+            <div class="project-card-placeholder">
+              <span>GIS</span>
+
+              <strong>
+                Tacoma Tideflats Closed Landfill
+              </strong>
+            </div>
 
             <div class="project-card-content">
               <h3>Tacoma Tideflats Closed Landfill GIS</h3>
@@ -142,17 +164,31 @@
                 View Project
               </a>
             </div>
+
           </article>
 
           <article class="project-card">
-            assets/images/habitat-cover.jpg
+
+            <video
+              controls
+              muted
+              playsinline
+              preload="metadata"
+              aria-label="Habitat assessment StoryMap preview"
+            >
+              <source
+                src="https://github.com/user-attachments/assets/10c80feb-7134-409c-aa90-2a8086c44c49"
+              >
+
+              Your browser does not support embedded video.
+            </video>
 
             <div class="project-card-content">
               <h3>Interactive Habitat Assessment StoryMap</h3>
 
               <p>
-                Habitat mapping, drone imagery, restoration documentation, and
-                environmental storytelling.
+                Habitat mapping, drone imagery, restoration documentation,
+                and environmental storytelling.
               </p>
 
               <div class="tags">
@@ -165,10 +201,16 @@
                 View Project
               </a>
             </div>
+
           </article>
 
           <article class="project-card">
-            assets/images/shoreline-cover.jpg
+
+            <img
+              src="https://github.com/user-attachments/assets/52ce3565-4f6b-4721-a516-202b5a457347"
+              alt="Shoreline OIC Experience Builder application preview"
+              loading="lazy"
+            >
 
             <div class="project-card-content">
               <h3>Shoreline OIC Experience Builder</h3>
@@ -188,10 +230,16 @@
                 View Project
               </a>
             </div>
+
           </article>
 
           <article class="project-card">
-            assets/images/bathymetry-cover.jpg
+
+            <img
+              src="https://github.com/user-attachments/assets/86672c1a-431e-477c-8235-b6744dfeac63"
+              alt="Port of Tacoma bathymetric surface visualization"
+              loading="lazy"
+            >
 
             <div class="project-card-content">
               <h3>Bathymetric Surface Development</h3>
@@ -211,19 +259,23 @@
                 View Project
               </a>
             </div>
+
           </article>
+
         </div>
 
         <div class="button-row">
-          portfolio.html
+          <a class="button" href="portfolio.html">
             View All Projects
           </a>
         </div>
+
       </div>
     </section>
 
     <section class="section">
       <div class="container">
+
         <div class="section-heading">
           <h2>Technical focus</h2>
 
@@ -235,6 +287,7 @@
         </div>
 
         <div class="skills-grid">
+
           <article class="skill-card">
             <h3>Environmental GIS</h3>
 
@@ -257,16 +310,20 @@
             <h3>Drone and Coastal GIS</h3>
 
             <p>
-              Repeatable imagery collection, shoreline monitoring, bathymetric
-              surfaces, temporal comparison, and spatial storytelling.
+              Repeatable imagery collection, shoreline monitoring,
+              bathymetric surfaces, temporal comparison, and spatial
+              storytelling.
             </p>
           </article>
+
         </div>
+
       </div>
     </section>
 
     <section class="section white">
       <div class="container">
+
         <div class="section-heading">
           <h2>Let’s connect</h2>
 
@@ -278,7 +335,10 @@
         </div>
 
         <div class="button-row">
-          <a class="button" href="mailto:faaseoliver@gmail.com">
+          <a
+            class="button"
+            href="mailto:faaseoliver@gmail.com"
+          >
             Email Me
           </a>
 
@@ -291,12 +351,15 @@
             LinkedIn
           </a>
         </div>
+
       </div>
     </section>
+
   </main>
 
   <footer class="site-footer">
     <div class="container footer-layout">
+
       <div>
         <strong>Oliver Faase</strong>
         <br>
@@ -306,6 +369,7 @@
       <a href="mailto:faaseoliver@gmail.com">
         faaseoliver@gmail.com
       </a>
+
     </div>
   </footer>
 
