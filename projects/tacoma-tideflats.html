@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Environmental database development, subsurface modeling, QA/QC, and automated cross sections.">
-  <title>Tacoma Tideflats Closed Landfill GIS | Oliver Faase</title>
+  <meta name="description" content="800+ field points from 40 years of reports turned into one geodatabase and five automated cross sections.">
+  <title>Tacoma Tideflats Landfill Delineation | Oliver Faase</title>
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
@@ -24,37 +24,41 @@
   </header>
 
   <main>
-    <section class="page-hero">
+    <section class="page-hero skyline">
       <div class="container">
-        <p class="eyebrow">Environmental GIS • ArcPy Automation</p>
-        <h1>Tacoma Tideflats Closed Landfill GIS</h1>
-        <p>Environmental database development, subsurface modeling, QA/QC, and automated cross sections.</p>
+        <p class="eyebrow">Professional Project • Port of Tacoma, Summer 2026</p>
+        <h1>Tacoma Tideflats Landfill Delineation</h1>
+        <p>800+ field points from 40 years of reports turned into one geodatabase and five automated cross sections.</p>
         <div class="button-row"><a class="button light" href="../tacoma-tideflats.html">Read Fact Sheet</a><a class="button light" href="https://github.com/oliverfaase/github-portfolio/tree/main/projects/tacoma-tideflats-landfill/scripts" target="_blank" rel="noopener noreferrer">View Python and ArcPy Code</a><a class="button light" href="https://github.com/oliverfaase/github-portfolio/releases/tag/TacomaTideflats" target="_blank" rel="noopener noreferrer">Download ArcGIS Pro Project</a></div>
       </div>
     </section>
     <section class="section light">
       <div class="container content">
         <article class="content-card reveal">
-          <h2>Project Overview</h2>
-          <p>I developed an integrated GIS database and automated mapping workflow for historical environmental information associated with the former Tacoma Tideflats closed landfill.</p><p>The completed inventory includes <strong>336 investigation locations</strong>, including boreholes, monitoring wells, test pits, probes, and soil borings. Records from environmental investigations, parcel reports, historical inspections, methane monitoring, and cleanup-site resources were consolidated into a structured and traceable geospatial framework.</p><div class="stats metrics"><div class="stat"><strong>336+</strong><span>Investigation locations</span></div><div class="stat"><strong>5</strong><span>Automated cross sections</span></div><div class="stat"><strong>20</strong><span>Fact-sheet pages</span></div></div>
+          <h2>Overview</h2>
+          <p>A former landfill sits under more than 200 acres of the Tacoma Tideflats, at the third-busiest port on the West Coast. It operated from the early 1940s to 1964, and two published boundaries disagree on where it ends.</p><p>I digitized 800+ field points from 40+ years of reports into one geodatabase, reconciled the boundaries, and screened 100+ exceedances against MTCA and CLARC standards with Python and AI-assisted QA/QC.</p><div class="stats metrics"><div class="stat"><strong>800+</strong><span>Points</span></div><div class="stat"><strong>100+</strong><span>Exceedances</span></div><div class="stat"><strong>5</strong><span>Sections</span></div></div>
         </article>
         <article class="content-card reveal">
-          <h2>Project Contributions</h2>
-          <ul class="list-clean"><li>Standardized investigation identifiers, types, contaminant descriptions, and depth measurements</li><li>Connected investigation locations to available sampling-depth records</li><li>Preserved source-document references and data-match confidence</li><li>Used composite identifiers to reduce incorrect joins</li><li>Distinguished exceedances, detections, landfill material, and missing data</li><li>Prevented missing analytical information from being interpreted as clean</li><li>Avoided extending a single-depth result through an entire boring</li></ul>
+          <h2>Role and Tools</h2>
+          <dl class="facts"><dt>Role</dt><dd>Geodatabase design, QA/QC, ArcPy automation, cartography</dd><dt>Tools</dt><dd>ArcGIS Pro, Python, ArcPy</dd><dt>Output</dt><dd>20-page fact sheet, 15 figures</dd></dl>
         </article>
         <article class="content-card reveal">
-          <h2>Automated Cross-Section Workflow</h2>
-          <ol class="steps"><li>Process cross-section lines</li><li>Select nearby investigation locations</li><li>Calculate each location's station along the section</li><li>Interpret and validate sampling-depth intervals</li><li>Generate maps for sections XS_A through XS_E</li><li>Create ground-surface lines, points, and depth sticks</li><li>Create analytical interval bands, labels, grids, and axes</li><li>Apply configurable vertical exaggeration and automated symbology</li></ol>
+          <h2>Cross-Section Location Map</h2>
+          <div class="gallery wide"><figure><img src="../assets/images/landfill-cross-section-map.jpg" alt="Individual work · Cross-section lines A to E and their 280-ft projection corridors" loading="lazy"><figcaption><strong>Fig. 3</strong>Individual work · Cross-section lines A to E and their 280-ft projection corridors</figcaption></figure></div>
         </article>
         <article class="content-card reveal">
-          <h2>Technical and QA/QC Details</h2>
-          <div class="tags"><span class="tag">Flexible field-name matching</span><span class="tag">Null-safe depth parsing</span><span class="tag">Duplicate-record handling</span><span class="tag">Composite identifiers</span><span class="tag">Spatial-reference validation</span><span class="tag">Configurable selection distances</span><span class="tag">Automated symbology</span><span class="tag">Match-confidence fields</span><span class="tag">Detailed error messages</span></div><p>I also developed a depth-based concentric-buffer workflow that generates polygon rings at three-foot increments. The framework can incorporate additional measurements, including methane readings, as value-based depth-interval overlays.</p>
+          <h2>Automated Cross Sections</h2>
+          <p>Each section is measured, not schematic. One script rebuilds all five whenever the record changes.</p><div class="flow"><span>Section lines: draw A to E</span><span>Corridor select: points within 280 ft</span><span>Stationing: project onto the line</span><span>Depth QA: validate intervals</span><span>Map output: XS_A to XS_E</span></div><div class="gallery"><figure><img src="../assets/images/landfill-section-a.jpg" alt="Lincoln Ave corridor: 135 locations over 2,394 ft" loading="lazy"><figcaption><strong>A to A'</strong>Lincoln Ave corridor: 135 locations over 2,394 ft</figcaption></figure><figure><img src="../assets/images/landfill-section-c.jpg" alt="Fire Training Center reach: the densest run of exceedances" loading="lazy"><figcaption><strong>C to C'</strong>Fire Training Center reach: the densest run of exceedances</figcaption></figure></div>
         </article>
         <article class="content-card reveal">
-          <h2>Project Value</h2>
-          <p>This project demonstrates my ability to transform fragmented historical and environmental records into a documented and reproducible GIS workflow, combining environmental data management, spatial analysis, ArcPy automation, subsurface modeling, QA/QC, and technical communication.</p>
+          <h2>Screening the Record</h2>
+          <p>Many historical borings have no preserved lab results. I mapped them as their own class so a missing result is never read as clean soil, and flagged isolated high results as ground that still needs study.</p><dl class="facts"><dt>Peak</dt><dd>225 times the cleanup level</dd><dt>Deepest</dt><dd>74.5 ft investigation</dd><dt>Methane</dt><dd>Monitoring record, 1997 to 2026</dd></dl><div class="gallery"><figure><img src="../assets/images/landfill-observation-categories.jpg" alt="Investigation points in nine observation categories" loading="lazy"><figcaption><strong>Fig. 9</strong>Investigation points in nine observation categories</figcaption></figure><figure><img src="../assets/images/landfill-concentration-ratios.jpg" alt="PAH and petroleum results as multiples of MTCA cleanup levels" loading="lazy"><figcaption><strong>Fig. 10</strong>PAH and petroleum results as multiples of MTCA cleanup levels</figcaption></figure></div>
         </article>
-        <a class="button" href="../portfolio.html">← Back to Portfolio</a>
+        <article class="content-card reveal">
+          <h2>Findings and Next Steps</h2>
+          <dl class="facts"><dt>Findings</dt><dd>The reconciled footprint covers 200+ acres and 10 Port parcels. Much of the historical record has no lab results: a gap in the data, not evidence of clean soil.</dd><dt>Results</dt><dd>559 mapped locations. Exceedances cluster in the Fire Training Center reach and along Lincoln Ave; one PAH result reached 225 times. Soil holds the most exceedances, then groundwater.</dd><dt>Next</dt><dd>Check conclusions against the Taylor Way and Alexander Avenue Fill Area study, refine the boundary as new borings arrive, and support a shift to annual methane monitoring.</dd></dl>
+        </article>
+        <div class="button-row"><a class="button" href="../portfolio.html">← All Projects</a><a class="button solid" href="../projects/bathymetric-surfaces.html">Next: Bathymetric Surfaces →</a></div>
       </div>
     </section>
   </main>

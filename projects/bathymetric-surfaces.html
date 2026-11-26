@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Hydrographic data processing, TIN-to-raster conversion, terrain modeling, and coastal GIS.">
-  <title>Bathymetric Surface Development | Oliver Faase</title>
+  <meta name="description" content="Hydrographic surveys turned into gap-checked depth rasters clipped to the shoreline.">
+  <title>Bathymetric Surfaces | Oliver Faase</title>
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
@@ -24,37 +24,33 @@
   </header>
 
   <main>
-    <section class="page-hero">
+    <section class="page-hero skyline">
       <div class="container">
-        <p class="eyebrow">Coastal GIS • Terrain Modeling</p>
-        <h1>Bathymetric Surface Development</h1>
-        <p>Hydrographic data processing, TIN-to-raster conversion, terrain modeling, and coastal GIS.</p>
+        <p class="eyebrow">Professional Project • Port of Tacoma, Summer 2026</p>
+        <h1>Bathymetric Surfaces</h1>
+        <p>Hydrographic surveys turned into gap-checked depth rasters clipped to the shoreline.</p>
         
       </div>
     </section>
     <section class="section light">
       <div class="container content">
         <article class="content-card reveal">
-          <h2>Project Overview</h2>
-          <p>I contributed to the development of a high-resolution bathymetric GIS dataset for the Port of Tacoma by transforming hydrographic survey information into an accurate representation of underwater terrain.</p><p>I converted Triangulated Irregular Network surfaces into raster datasets constrained to complex, curved shoreline and waterway boundaries, improving analysis, visualization, and spatial precision.</p>
+          <h2>Overview</h2>
+          <p>The Port's waterways are dredged, navigated, and monitored, so their depth has to be precise. I processed hydrographic survey data and converted TIN surfaces into rasters clipped to the curved shoreline and waterway edges, then checked them for gaps.</p>
         </article>
         <article class="content-card reveal">
-          <h2>Project Media</h2>
-          <div class="media-grid"><img src="https://github.com/user-attachments/assets/86672c1a-431e-477c-8235-b6744dfeac63" alt="Port of Tacoma bathymetric surface visualization" loading="lazy"><img src="https://github.com/user-attachments/assets/b775447a-be58-466d-baff-3a50a5d25ca0" alt="Port of Tacoma bathymetric mapping product" loading="lazy"></div><p class="caption">Bathymetric mapping products developed from hydrographic survey data.</p>
+          <h2>Maps</h2>
+          <div class="gallery"><figure><img src="../assets/images/bathymetry-detail.jpg" alt="Individual work · Depth contours in feet: a shoal ridge near -20 ft and a deep channel past -90 ft" loading="lazy"><figcaption><strong>Detail</strong>Individual work · Depth contours in feet: a shoal ridge near -20 ft and a deep channel past -90 ft</figcaption></figure><figure><img src="../assets/images/bathymetry-overview.jpg" alt="Individual work · Survey extent, Tideflats waterways, clipped to the shoreline" loading="lazy"><figcaption><strong>Overview</strong>Individual work · Survey extent, Tideflats waterways, clipped to the shoreline</figcaption></figure></div>
         </article>
         <article class="content-card reveal">
-          <h2>Project Contributions</h2>
-          <ul class="list-clean"><li>Processed hydrographic survey information</li><li>Converted TIN surfaces into raster datasets</li><li>Developed rasters constrained to complex shoreline boundaries</li><li>Maintained spatial precision around curved waterways</li><li>Evaluated outputs for gaps and boundary inconsistencies</li><li>Performed geodatabase management and quality assurance</li></ul>
+          <h2>What It Showed and Solves</h2>
+          <dl class="facts"><dt>Uses</dt><dd>Dredging, navigation, environmental monitoring, port planning</dd><dt>Tools</dt><dd>ArcGIS Pro, TIN to raster, terrain modeling, QA/QC</dd><dt>Showed</dt><dd>A deep channel below -90 ft and a shallow bench near -20 ft, mapped as continuous surfaces instead of scattered soundings.</dd><dt>Solves</dt><dd>One gap-checked surface that follows the real shoreline, so dredging volumes and navigation clearances aren't skewed by data outside the water.</dd><dt>Next</dt><dd>Future surveys can be compared against this baseline to track sediment buildup and plan maintenance dredging.</dd></dl>
         </article>
         <article class="content-card reveal">
           <h2>Workflow</h2>
           <div class="flow"><span>Hydrographic Survey Data</span><span>Data Review</span><span>TIN</span><span>TIN-to-Raster</span><span>Shoreline Constraints</span><span>Surface QA/QC</span><span>Visualization</span></div>
         </article>
-        <article class="content-card reveal">
-          <h2>Applications</h2>
-          <div class="tags"><span class="tag">Maritime infrastructure planning</span><span class="tag">Dredging operations</span><span class="tag">Navigational assessments</span><span class="tag">Underwater-terrain visualization</span><span class="tag">Environmental monitoring</span><span class="tag">Long-term port planning</span></div>
-        </article>
-        <a class="button" href="../portfolio.html">← Back to Portfolio</a>
+        <div class="button-row"><a class="button" href="../portfolio.html">← All Projects</a><a class="button solid" href="../projects/habitat-storymap.html">Next: Habitat Assessment StoryMap →</a></div>
       </div>
     </section>
   </main>
