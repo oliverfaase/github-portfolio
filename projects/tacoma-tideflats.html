@@ -2,39 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
-
-  <title>Tacoma Tideflats Landfill GIS | Oliver Faase</title>
-
-  ../assets/css/style.css
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Environmental database development, subsurface modeling, QA/QC, and automated cross sections.">
+  <title>Tacoma Tideflats Closed Landfill GIS | Oliver Faase</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
 </head>
-
 <body>
-  <header class="site-header">
-    <div class="container navigation">
-      ../index.html
-        Oliver Faase
-      </a>
-
-      <button
-        class="menu-button"
-        type="button"
-        aria-label="Open navigation menu"
-        aria-expanded="false"
-      >
-        Menu
-      </button>
-
+  <header class="navbar">
+    <div class="container">
+      <a class="brand" href="../index.html">OLIVER FAASE</a>
+      <button class="menu-button" type="button" aria-label="Open navigation menu" aria-expanded="false">Menu</button>
       <nav aria-label="Primary navigation">
         <ul class="nav-links">
-          <li>../index.htmlHome</a></li>
-          <li>../portfolio.htmlPortfolio</a></li>
-          <li>../about.htmlAbout</a></li>
-          <li>../resume.htmlRésumé</a></li>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../portfolio.html" aria-current="page">Portfolio</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../resume.html">Résumé</a></li>
         </ul>
       </nav>
     </div>
@@ -43,133 +26,50 @@
   <main>
     <section class="page-hero">
       <div class="container">
-        <p class="eyebrow">
-          Environmental GIS • ArcPy Automation
-        </p>
-
+        <p class="eyebrow">Environmental GIS • ArcPy Automation</p>
         <h1>Tacoma Tideflats Closed Landfill GIS</h1>
-
-        <p>
-          Environmental database development, historical-record integration,
-          subsurface cross-section automation, QA/QC, and technical
-          communication.
-        </p>
-
-        <div class="button-row">
-          ../tacoma-tideflats.html
-            Read Fact Sheet
-          </a>
-
-          <a
-            class="button light"
-            href="https://github.com/oliverfaase/github-portfolio">
-            View Python and ArcPy Code
-          </a>
-        </div>
+        <p>Environmental database development, subsurface modeling, QA/QC, and automated cross sections.</p>
+        <div class="button-row"><a class="button light" href="../tacoma-tideflats.html">Read Fact Sheet</a><a class="button light" href="https://github.com/oliverfaase/github-portfolio/tree/main/projects/tacoma-tideflats-landfill/scripts" target="_blank" rel="noopener noreferrer">View Python and ArcPy Code</a><a class="button light" href="https://github.com/oliverfaase/github-portfolio/releases/tag/TacomaTideflats" target="_blank" rel="noopener noreferrer">Download ArcGIS Pro Project</a></div>
       </div>
     </section>
-
-    <section class="section white">
-      <div class="container">
-        <article class="content-card">
+    <section class="section light">
+      <div class="container content">
+        <article class="content-card reveal">
           <h2>Project Overview</h2>
-
-          <p>
-            I developed an integrated GIS database and automated mapping
-            workflow for historical environmental information associated with
-            the former Tacoma Tideflats closed landfill.
-          </p>
-
-          <p>
-            The inventory includes 336 investigation locations, including
-            boreholes, monitoring wells, test pits, probes, and soil borings.
-          </p>
-
-          <div class="metrics">
-            <div class="metric">
-              <strong>336+</strong>
-              <span>Investigation locations</span>
-            </div>
-
-            <div class="metric">
-              <strong>5</strong>
-              <span>Automated cross sections</span>
-            </div>
-
-            <div class="metric">
-              <strong>20</strong>
-              <span>Fact-sheet pages</span>
-            </div>
-          </div>
+          <p>I developed an integrated GIS database and automated mapping workflow for historical environmental information associated with the former Tacoma Tideflats closed landfill.</p><p>The completed inventory includes <strong>336 investigation locations</strong>, including boreholes, monitoring wells, test pits, probes, and soil borings. Records from environmental investigations, parcel reports, historical inspections, methane monitoring, and cleanup-site resources were consolidated into a structured and traceable geospatial framework.</p><div class="stats metrics"><div class="stat"><strong>336+</strong><span>Investigation locations</span></div><div class="stat"><strong>5</strong><span>Automated cross sections</span></div><div class="stat"><strong>20</strong><span>Fact-sheet pages</span></div></div>
         </article>
-
-        <article class="content-card">
+        <article class="content-card reveal">
           <h2>Project Contributions</h2>
-
-          <ul>
-            <li>Standardized investigation identifiers and location types</li>
-            <li>Connected locations to available sampling-depth records</li>
-            <li>Preserved source-document references and match confidence</li>
-            <li>Used composite identifiers to reduce incorrect joins</li>
-            <li>Distinguished exceedances, detections, and missing data</li>
-            <li>Prevented missing analytical information from appearing clean</li>
-            <li>Avoided extending one-depth results through entire borings</li>
-          </ul>
+          <ul class="list-clean"><li>Standardized investigation identifiers, types, contaminant descriptions, and depth measurements</li><li>Connected investigation locations to available sampling-depth records</li><li>Preserved source-document references and data-match confidence</li><li>Used composite identifiers to reduce incorrect joins</li><li>Distinguished exceedances, detections, landfill material, and missing data</li><li>Prevented missing analytical information from being interpreted as clean</li><li>Avoided extending a single-depth result through an entire boring</li></ul>
         </article>
-
-        <article class="content-card">
+        <article class="content-card reveal">
           <h2>Automated Cross-Section Workflow</h2>
-
-          <ol>
-            <li>Process cross-section lines</li>
-            <li>Select nearby investigation locations</li>
-            <li>Calculate station along each section</li>
-            <li>Interpret and validate depth intervals</li>
-            <li>Generate maps for XS_A through XS_E</li>
-            <li>Create ground-surface lines, points, and depth sticks</li>
-            <li>Create analytical bands, labels, grids, and axes</li>
-            <li>Apply configurable exaggeration and symbology</li>
-          </ol>
+          <ol class="steps"><li>Process cross-section lines</li><li>Select nearby investigation locations</li><li>Calculate each location's station along the section</li><li>Interpret and validate sampling-depth intervals</li><li>Generate maps for sections XS_A through XS_E</li><li>Create ground-surface lines, points, and depth sticks</li><li>Create analytical interval bands, labels, grids, and axes</li><li>Apply configurable vertical exaggeration and automated symbology</li></ol>
         </article>
-
-        <article class="content-card">
-          <h2>Project Materials</h2>
-
-          <div class="button-row">
-            ../tacoma-tideflats.html
-              Scroll Through Fact Sheet
-            </a>
-
-            <a
-              class="button blue"
-              href="https://github.com/oliverfaase/github-portfolio">
-              View Code Archive
-            </a>
-
-            <a
-              class="button"
-              href="https://github.com/oliverfaase/github-portfolio/releases/tag/TacomaTideflats"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Download ArcGIS Pro Project
-            </a>
-          </div>
+        <article class="content-card reveal">
+          <h2>Technical and QA/QC Details</h2>
+          <div class="tags"><span class="tag">Flexible field-name matching</span><span class="tag">Null-safe depth parsing</span><span class="tag">Duplicate-record handling</span><span class="tag">Composite identifiers</span><span class="tag">Spatial-reference validation</span><span class="tag">Configurable selection distances</span><span class="tag">Automated symbology</span><span class="tag">Match-confidence fields</span><span class="tag">Detailed error messages</span></div><p>I also developed a depth-based concentric-buffer workflow that generates polygon rings at three-foot increments. The framework can incorporate additional measurements, including methane readings, as value-based depth-interval overlays.</p>
         </article>
+        <article class="content-card reveal">
+          <h2>Project Value</h2>
+          <p>This project demonstrates my ability to transform fragmented historical and environmental records into a documented and reproducible GIS workflow, combining environmental data management, spatial analysis, ArcPy automation, subsurface modeling, QA/QC, and technical communication.</p>
+        </article>
+        <a class="button" href="../portfolio.html">← Back to Portfolio</a>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-layout">
-      <strong>Oliver Faase</strong>
-
-      ../portfolio.html
-        Return to Portfolio
-      </a>
+      <a class="brand" href="../index.html">OLIVER FAASE</a>
+      <div class="footer-links">
+        <a href="mailto:faaseoliver@gmail.com">faaseoliver@gmail.com</a>
+        <a href="https://www.linkedin.com/in/oliverfaase/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/oliverfaase/github-portfolio" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
     </div>
   </footer>
 
-  ../assets/js/main.jsscript>
+  <script src="../assets/js/main.js"></script>
 </body>
 </html>

@@ -2,18 +2,82 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About Oliver Faase: environmental GIS, planning, and geospatial automation.">
   <title>About | Oliver Faase</title>
-
-  assets/css/style.css
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
-
 <body>
-  <header class="site-header">
-    <div class="container navigation">
-    
+  <header class="navbar">
+    <div class="container">
+      <a class="brand" href="index.html">OLIVER FAASE</a>
+      <button class="menu-button" type="button" aria-label="Open navigation menu" aria-expanded="false">Menu</button>
+      <nav aria-label="Primary navigation">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="about.html" aria-current="page">About</a></li>
+          <li><a href="resume.html">Résumé</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">About</p>
+        <h1>Hi, I'm Oliver.</h1>
+        <p>Environmental GIS, planning, and geospatial automation.</p>
+        
+      </div>
+    </section>
+    <section class="section light">
+      <div class="container about reveal">
+        <div class="avatar" aria-hidden="true">OF</div>
+        <div>
+          <p>I am an <strong>Environmental GIS Intern</strong> specializing in environmental planning,
+          spatial data management, ArcGIS automation, subsurface visualization, drone imagery,
+          interactive web mapping, and public-facing GIS communication.</p>
+          <p>I transform complex environmental information into reproducible GIS workflows,
+          interactive applications, and decision-ready visualizations.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container content">
+        <article class="content-card reveal">
+          <h2>How I Work</h2>
+          <ul class="list-clean"><li><strong>Traceable</strong>: clear connections to original records and source documents</li><li><strong>Reproducible</strong>: Python, ArcPy, and documented GIS workflows</li><li><strong>Spatially accurate</strong>: validated coordinate systems and QA/QC procedures</li><li><strong>Accessible</strong>: maps, imagery, applications, and multimedia</li><li><strong>Decision-ready</strong>: built for environmental monitoring, planning, review, and site management</li></ul>
+        </article>
+        <article class="content-card reveal">
+          <h2>Areas of Interest</h2>
+          <div class="tags"><span class="tag">Environmental planning and GIS</span><span class="tag">Coastal and shoreline analysis</span><span class="tag">Python and ArcPy automation</span><span class="tag">Subsurface data visualization</span><span class="tag">Drone-based environmental monitoring</span><span class="tag">GeoAI-assisted image analysis</span><span class="tag">Interactive web mapping</span><span class="tag">GIS storytelling</span><span class="tag">Spatial database development</span><span class="tag">QA/QC</span></div>
+        </article>
+        <article class="content-card reveal">
+          <h2>Core Principles</h2>
+          <ul class="list-clean"><li>Preserve traceability to original records</li><li>Document assumptions and limitations</li><li>Distinguish missing information from confirmed absence</li><li>Automate repeatable processes where appropriate</li><li>Validate spatial references and data structures</li><li>Design outputs for technical and nontechnical audiences</li><li>Communicate environmental information accurately and responsibly</li></ul>
+        </article>
+        <article class="content-card reveal">
+          <h2>Project Approach</h2>
+          <div class="flow"><span>Environmental Records</span><span>Data Cleaning</span><span>QA and Validation</span><span>Geospatial Database</span><span>Spatial Analysis</span><span>Python and ArcPy</span><span>Maps and Applications</span><span>Planning Decisions</span></div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-layout">
+      <a class="brand" href="index.html">OLIVER FAASE</a>
+      <div class="footer-links">
+        <a href="mailto:faaseoliver@gmail.com">faaseoliver@gmail.com</a>
+        <a href="https://www.linkedin.com/in/oliverfaase/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/oliverfaase/github-portfolio" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
